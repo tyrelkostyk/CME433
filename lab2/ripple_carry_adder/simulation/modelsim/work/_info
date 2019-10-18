@@ -1,0 +1,98 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/tck290/engr-ece
+T_opt
+!s110 1570230843
+VFW@YeEfgRRkd8hD_KgV4X3
+04 28 4 work ripple_carry_adder_testbench fast 0
+=1-005056600039-5d97d23b-145ad-d04
+o-quiet -auto_acc_if_foreign -work work
+n@_opt
+OE;O;10.3a;59
+vone_bit_rpc_adder
+Z0 !s110 1570230837
+!i10b 1
+!s100 TDJWDm7SmL:AKWFJ:VUhf2
+IVkk_TXF=<HPDO:BBZn5E:2
+Z1 V`JN@9S9cnhjKRR_L]QIcM3
+Z2 d/home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/simulation/modelsim
+w1570229614
+8/home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/one_bit_rpc_adder.v
+F/home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/one_bit_rpc_adder.v
+L0 1
+Z3 OE;L;10.3a;59
+r1
+!s85 0
+31
+!s108 1570230837.504747
+!s107 /home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/one_bit_rpc_adder.v|
+!s90 -reportprogress|300|-stats=none|-work|work|-vopt|/home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/one_bit_rpc_adder.v|
+!i113 0
+Z4 o-work work -L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+vripple_carry_adder
+R0
+!i10b 1
+!s100 l`4K=bc=bJTfhI6IgbUhe1
+I=l9KzSAEj0B5NCBA1;?4Z2
+R1
+R2
+w1570226122
+8/home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/ripple_carry_adder.v
+F/home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/ripple_carry_adder.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1570230837.561605
+!s107 /home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/ripple_carry_adder.v|
+!s90 -reportprogress|300|-stats=none|-work|work|-vopt|/home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/ripple_carry_adder.v|
+!i113 0
+R4
+vripple_carry_adder_testbench
+R0
+!i10b 1
+!s100 AcVdYhdMXG7R6:IXYHfc83
+I2XHf3W1@XCXZ7AM_Xi]1z1
+R1
+R2
+w1570230833
+8/home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/simulation/modelsim/ripple_carry_adder_testbench.v
+F/home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/simulation/modelsim/ripple_carry_adder_testbench.v
+L0 4
+R3
+r1
+!s85 0
+31
+!s108 1570230837.435425
+!s107 /home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/simulation/modelsim/ripple_carry_adder_testbench.v|
+!s90 -reportprogress|300|-stats=none|-work|work|-vopt|/home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/simulation/modelsim/ripple_carry_adder_testbench.v|
+!i113 0
+R4
+vtbench_top
+!s110 1570229435
+!i10b 1
+!s100 jEhR>_4Kna_I0<7:1HMU83
+I1oKKN77C`9`?l6:lS>bDc3
+R1
+R2
+w1570228225
+8/home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/tbench_top.v
+F/home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/tbench_top.v
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1570229435.195258
+!s107 /home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/tbench_top.v|
+!s90 -reportprogress|300|-stats=none|-work|work|-vopt|/home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/tbench_top.v|
+!i113 0
+R4

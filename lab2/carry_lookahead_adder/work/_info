@@ -1,0 +1,131 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/tck290/engr-ece/CME433/lab2/carry_lookahead_adder
+vadder_top
+Z1 !s110 1570757891
+!i10b 1
+!s100 kjlL^ZCa]SO@NY2Hz7n6h1
+IDFa1>]m[bNSMSeKIJ_[KH3
+Z2 V`JN@9S9cnhjKRR_L]QIcM3
+R0
+w1570658416
+8adder_top.v
+Fadder_top.v
+L0 1
+Z3 OE;L;10.3a;59
+r1
+!s85 0
+31
+Z4 !s108 1570757891.440146
+Z5 !s107 thirty_two_bit_cla.v|tbench_top.v|one_bit_cla.v|four_bit_cla.v|cla_adder_testbench.v|adder_top.v|
+Z6 !s90 -reportprogress|300|adder_top.v|cla_adder_testbench.v|four_bit_cla.v|one_bit_cla.v|tbench_top.v|thirty_two_bit_cla.v|
+!i113 0
+vcla_adder_testbench
+R1
+!i10b 1
+!s100 ]XAfjQ3VoAf7cIC4;beLd1
+IiBNZP0T8d19:j@n3BB7]V0
+R2
+R0
+w1570742307
+8cla_adder_testbench.v
+Fcla_adder_testbench.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+vfour_bit_cla
+R1
+!i10b 1
+!s100 S2@a=@R`DJn_W513EnP:U1
+I`T`zDFd@;5RRUTWmmGMm;0
+R2
+R0
+w1570744567
+8four_bit_cla.v
+Ffour_bit_cla.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+vone_bit_cla
+R1
+!i10b 1
+!s100 cj6Fm6[Sb;Q;d:FjaY_^R1
+IXa8C0_K1cd7adcGN@]`[P3
+R2
+R0
+w1570659051
+8one_bit_cla.v
+Fone_bit_cla.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+vtbench_top
+R1
+!i10b 1
+!s100 T5E4YzIM0CGRQ=@MllHUb2
+ImDUkH=zh2E7kQF>82>z]A1
+R2
+R0
+w1570744220
+8tbench_top.v
+Ftbench_top.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0
+Ttbench_top_opt
+R1
+VMZ:e0coBSQFlR7B@do78O1
+04 10 4 work tbench_top fast 0
+o+acc
+ntbench_top_opt
+OE;O;10.3a;59
+vthirty_two_bit_cla
+R1
+!i10b 1
+!s100 <PV0dRU4WdDCF;b_1Q37b3
+IG149=?ACO0U@=@a<DRaIO3
+R2
+R0
+w1570744755
+8thirty_two_bit_cla.v
+Fthirty_two_bit_cla.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 0

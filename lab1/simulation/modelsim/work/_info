@@ -1,0 +1,115 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/tck290/engr-ece
+vhard_block
+Z0 !s110 1569537931
+!i10b 1
+!s100 FWf]jC]V^[E]QfB1RG00n0
+IC15M:G985Nb6K:nLDooD63
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/home/tck290/engr-ece/CME433/lab1/simulation/modelsim
+w1569537914
+8/home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity.vo
+F/home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity.vo
+L0 418
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1569537931.000000
+!s107 /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity.vo|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity.vo|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+vparity
+Z7 !s110 1569537932
+!i10b 1
+!s100 g:DEM2o5`jhQIV4kh6dF91
+Ijc=lcG`?<=>6U2hJDLMF@3
+R1
+R2
+w1569532184
+8/home/tck290/engr-ece/CME433/lab1/parity.v
+F/home/tck290/engr-ece/CME433/lab1/parity.v
+L0 1
+R3
+r1
+!s85 0
+31
+Z8 !s108 1569537932.000000
+!s107 /home/tck290/engr-ece/CME433/lab1/parity.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tck290/engr-ece/CME433/lab1/parity.v|
+!i113 1
+R5
+R6
+vparity_conventional
+R0
+!i10b 1
+!s100 K_XKeWMfUV`FM1BK^JW4`3
+IE06<f^1WmfN9a;QF8<fF33
+R1
+R2
+w1569017265
+8/home/tck290/engr-ece/CME433/lab1/parity_conventional.v
+F/home/tck290/engr-ece/CME433/lab1/parity_conventional.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/tck290/engr-ece/CME433/lab1/parity_conventional.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tck290/engr-ece/CME433/lab1/parity_conventional.v|
+!i113 1
+R5
+R6
+vparity_davio_template
+R7
+!i10b 1
+!s100 AC^9>O^HMG@KD>Hi98_cT3
+IC=HRV<EASLLXalfY7ca123
+R1
+R2
+w1569537873
+8/home/tck290/engr-ece/CME433/lab1/parity_davio_template.v
+F/home/tck290/engr-ece/CME433/lab1/parity_davio_template.v
+L0 1
+R3
+r1
+!s85 0
+31
+R8
+!s107 /home/tck290/engr-ece/CME433/lab1/parity_davio_template.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tck290/engr-ece/CME433/lab1/parity_davio_template.v|
+!i113 1
+R5
+R6
+vparity_testbench
+R0
+!i10b 1
+!s100 9_V[][iS3mdVfl9COHOl70
+I;QBLbz9=::1fHD=m=@?W@2
+R1
+R2
+w1569536986
+8/home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v
+F/home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+!s107 /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v|
+!i113 1
+R5
+R6

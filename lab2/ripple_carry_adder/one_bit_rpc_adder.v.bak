@@ -1,0 +1,17 @@
+module one_bit_rpc_adder(A, B, Cin, S, Cout);
+
+input A, B, Cin;
+
+output S, Cout;
+
+wire nor1, nor2, and1, and2;
+
+assign nor1 = !( A | B);
+assign S = !( nor1 | Cin );
+
+assign and1 = nor1 & Cin;
+assign and2 = A & B;
+
+assign Cout = and1 | and2;
+
+endmodule

@@ -1,0 +1,197 @@
+# Loading project parity_testbench
+# Load canceled
+# Load canceled
+# Compile of parity_testbench.v failed with 1 errors.
+# Compile of parity_testbench.v was successful.
+vsim work.parity_testbench -L cycloneive_ver -L altera_mf -L altera_mf_ver
+# vsim work.parity_testbench -L cycloneive_ver -L altera_mf -L altera_mf_ver 
+# Start time: 16:12:21 on Sep 26,2019
+# Loading work.parity_testbench
+# ** Error: (vsim-3033) /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v(12): Instantiation of 'parity' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /parity_testbench File: /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v
+#         Searched libraries:
+#             /opt/intelFPGA/18.1/modelsim_ase/altera/verilog/cycloneive
+#             /opt/intelFPGA/18.1/modelsim_ase/altera/vhdl/altera_mf
+#             /opt/intelFPGA/18.1/modelsim_ase/altera/verilog/altera_mf
+#             /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/work
+# Error loading design
+# End time: 16:12:22 on Sep 26,2019, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench
+# vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench 
+# Start time: 16:15:44 on Sep 26,2019
+# Loading work.parity_testbench
+# ** Error: (vsim-3033) /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v(12): Instantiation of 'parity' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /parity_testbench File: /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v
+#         Searched libraries:
+#             /opt/intelFPGA/18.1/modelsim_ase/altera/verilog/cycloneive
+#             /opt/intelFPGA/18.1/modelsim_ase/altera/vhdl/altera_mf
+#             /opt/intelFPGA/18.1/modelsim_ase/altera/verilog/altera_mf
+#             /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/work
+# Error loading design
+# End time: 16:15:44 on Sep 26,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# Compile of parity_testbench.v failed with 1 errors.
+vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench
+# vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench 
+# Start time: 16:15:59 on Sep 26,2019
+# Loading work.parity_testbench
+# ** Error: (vsim-3033) /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v(12): Instantiation of 'parity' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /parity_testbench File: /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v
+#         Searched libraries:
+#             /opt/intelFPGA/18.1/modelsim_ase/altera/verilog/cycloneive
+#             /opt/intelFPGA/18.1/modelsim_ase/altera/vhdl/altera_mf
+#             /opt/intelFPGA/18.1/modelsim_ase/altera/verilog/altera_mf
+#             /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/work
+# Error loading design
+# End time: 16:15:59 on Sep 26,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# Compile of parity_testbench.v failed with 1 errors.
+# Compile of parity_testbench.v failed with 1 errors.
+vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench
+# vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench 
+# Start time: 16:24:20 on Sep 26,2019
+# Loading work.parity_testbench
+# ** Error: (vsim-3033) /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v(12): Instantiation of 'parity' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /parity_testbench File: /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v
+#         Searched libraries:
+#             /opt/intelFPGA/18.1/modelsim_ase/altera/verilog/cycloneive
+#             /opt/intelFPGA/18.1/modelsim_ase/altera/vhdl/altera_mf
+#             /opt/intelFPGA/18.1/modelsim_ase/altera/verilog/altera_mf
+#             /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/work
+# Error loading design
+# End time: 16:24:21 on Sep 26,2019, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Compile of parity_testbench.v failed with 1 errors.
+# Compile of parity.vo was successful.
+# Compile of parity_conventional.v was successful.
+# Compile of parity.v was successful.
+# 4 compiles, 1 failed with 1 error.
+# Compile of parity_testbench.v was successful.
+# Compile of parity.vo was successful.
+# Compile of parity_conventional.v was successful.
+# Compile of parity.v was successful.
+# 4 compiles, 0 failed with no errors.
+vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench
+# vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench 
+# Start time: 16:26:25 on Sep 26,2019
+# Loading work.parity_testbench
+# Loading work.parity
+# Loading work.parity_conventional
+# ** Error: (vsim-3033) /home/tck290/engr-ece/CME433/lab1/parity.v(11): Instantiation of 'parity_davio_template' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /parity_testbench/par File: /home/tck290/engr-ece/CME433/lab1/parity.v
+#         Searched libraries:
+#             /opt/intelFPGA/18.1/modelsim_ase/altera/verilog/cycloneive
+#             /opt/intelFPGA/18.1/modelsim_ase/altera/vhdl/altera_mf
+#             /opt/intelFPGA/18.1/modelsim_ase/altera/verilog/altera_mf
+#             /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/work
+# Error loading design
+# End time: 16:26:25 on Sep 26,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# Compile of parity_testbench.v was successful.
+# Compile of parity.vo was successful.
+# Compile of parity_conventional.v was successful.
+# Compile of parity.v was successful.
+# Compile of parity_davio_template.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench
+# vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench 
+# Start time: 16:27:19 on Sep 26,2019
+# Loading work.parity_testbench
+# Loading work.parity
+# Loading work.parity_conventional
+# Loading work.parity_davio_template
+run -all
+# ** Note: $stop    : /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v(12)
+#    Time: 500 us  Iteration: 0  Instance: /parity_testbench
+# Break in Module parity_testbench at /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v line 12
+add wave -position insertpoint  \
+sim:/parity_testbench/D \
+sim:/parity_testbench/F_conv \
+sim:/parity_testbench/F_davio
+run -all
+# Break key hit
+# Simulation stop requested.
+vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench
+# End time: 16:28:17 on Sep 26,2019, Elapsed time: 0:00:58
+# Errors: 0, Warnings: 0
+# vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench 
+# Start time: 16:28:17 on Sep 26,2019
+# Loading work.parity_testbench
+# Loading work.parity
+# Loading work.parity_conventional
+# Loading work.parity_davio_template
+add wave -position insertpoint  \
+sim:/parity_testbench/D \
+sim:/parity_testbench/F_conv \
+sim:/parity_testbench/F_davio
+run -all
+# ** Note: $stop    : /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v(12)
+#    Time: 500 us  Iteration: 0  Instance: /parity_testbench
+# Break in Module parity_testbench at /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v line 12
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/wave.do
+run
+run
+# Compile of parity_testbench.v was successful.
+# Compile of parity.vo was successful.
+# Compile of parity_conventional.v was successful.
+# Compile of parity.v was successful.
+# Compile of parity_davio_template.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench
+# End time: 16:29:54 on Sep 26,2019, Elapsed time: 0:01:37
+# Errors: 0, Warnings: 0
+# vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench 
+# Start time: 16:29:54 on Sep 26,2019
+# Loading work.parity_testbench
+# Loading work.parity
+# Loading work.parity_conventional
+# Loading work.parity_davio_template
+do wave.do
+run -all
+# ** Note: $stop    : /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v(12)
+#    Time: 1 ms  Iteration: 0  Instance: /parity_testbench
+# Break in Module parity_testbench at /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v line 12
+# Compile of parity_testbench.v was successful.
+# Compile of parity.vo was successful.
+# Compile of parity_conventional.v was successful.
+# Compile of parity.v was successful.
+# Compile of parity_davio_template.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench
+# End time: 16:36:54 on Sep 26,2019, Elapsed time: 0:07:00
+# Errors: 0, Warnings: 0
+# vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench 
+# Start time: 16:36:54 on Sep 26,2019
+# Loading work.parity_testbench
+# Loading work.parity
+# Loading work.parity_conventional
+# Loading work.parity_davio_template
+do wave.do
+run -all
+# ** Note: $stop    : /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v(12)
+#    Time: 1 ms  Iteration: 0  Instance: /parity_testbench
+# Break in Module parity_testbench at /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v line 12
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/wave.do
+# Compile of parity_testbench.v was successful.
+# Compile of parity.vo was successful.
+# Compile of parity_conventional.v was successful.
+# Compile of parity.v was successful.
+# Compile of parity_davio_template.v was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench
+# End time: 16:45:37 on Sep 26,2019, Elapsed time: 0:08:43
+# Errors: 0, Warnings: 0
+# vsim -L cycloneive_ver -L altera_mf -L altera_mf_ver work.parity_testbench 
+# Start time: 16:45:37 on Sep 26,2019
+# Loading work.parity_testbench
+# Loading work.parity
+# Loading work.parity_conventional
+# Loading work.parity_davio_template
+do wave.do
+run -all
+# ** Note: $stop    : /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v(12)
+#    Time: 1 ms  Iteration: 0  Instance: /parity_testbench
+# Break in Module parity_testbench at /home/tck290/engr-ece/CME433/lab1/simulation/modelsim/parity_testbench.v line 12
+# End time: 16:48:11 on Sep 26,2019, Elapsed time: 0:02:34
+# Errors: 0, Warnings: 0

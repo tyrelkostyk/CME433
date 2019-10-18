@@ -1,0 +1,15 @@
+/home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/simulation/modelsim/ripple_carry_adder_testbench.v {1 {vlog -stats=none -work work -vopt /home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/simulation/modelsim/ripple_carry_adder_testbench.v
+QuestaSim vlog 10.3a Compiler 2014.04 Apr 13 2014
+-- Compiling module ripple_carry_adder_testbench
+
+Top level modules:
+	ripple_carry_adder_testbench
+
+} {} {}} /home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/one_bit_rpc_adder.v {1 {vlog -stats=none -work work -vopt /home/tck290/engr-ece/CME433/lab2/ripple_carry_adder/one_bit_rpc_adder.v
+QuestaSim vlog 10.3a Compiler 2014.04 Apr 13 2014
+-- Compiling module one_bit_rpc_adder
+
+Top level modules:
+	one_bit_rpc_adder
+
+} {} {}}

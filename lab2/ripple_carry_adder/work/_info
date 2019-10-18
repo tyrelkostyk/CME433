@@ -1,0 +1,115 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/tck290/engr-ece/CME433/lab2/ripple_carry_adder
+vadder_top
+Z1 !s110 1570654257
+!i10b 1
+!s100 G<=HT9>S3<5`;[05R29LE3
+I3hl[>3]@Tnf8L;7zBTBhF0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1570477639
+8adder_top.v
+Fadder_top.v
+L0 1
+Z3 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z4 !s108 1570654257.000000
+Z5 !s107 tbench_top.v|ripple_carry_adder_testbench.v|ripple_carry_adder.v|one_bit_rpc_adder.v|adder_top.v|
+Z6 !s90 -reportprogress|300|adder_top.v|one_bit_rpc_adder.v|ripple_carry_adder.v|ripple_carry_adder_testbench.v|tbench_top.v|
+!i113 1
+Z7 o-L mtiAvm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 tCvgOpt 0
+vone_bit_rpc_adder
+R1
+!i10b 1
+!s100 TDJWDm7SmL:AKWFJ:VUhf2
+I6E47eLOW4_>i@mifil?;O0
+R2
+R0
+w1570479842
+8one_bit_rpc_adder.v
+Fone_bit_rpc_adder.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+R8
+vripple_carry_adder
+R1
+!i10b 1
+!s100 iY`eoK2UJbcUJ<`_mMWLz2
+Ic[YfNRlai?T`HNXe;^4l81
+R2
+R0
+w1570479840
+8ripple_carry_adder.v
+Fripple_carry_adder.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+R8
+vripple_carry_adder_testbench
+R1
+!i10b 1
+!s100 0TzYh2F6XkY5CNoRkkP`F2
+I`aHcAJT=K[WOeenjUU?Dz2
+R2
+R0
+w1570479834
+8ripple_carry_adder_testbench.v
+Fripple_carry_adder_testbench.v
+L0 3
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+R8
+vtbench_top
+R1
+!i10b 1
+!s100 VVLi=1B[TM3S^BzKEBSC<1
+Ig?b?4T`Vno`kMXc2;2kP@3
+R2
+R0
+w1570479846
+8tbench_top.v
+Ftbench_top.v
+L0 1
+R3
+r1
+!s85 0
+31
+R4
+R5
+R6
+!i113 1
+R7
+R8

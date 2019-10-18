@@ -1,0 +1,3 @@
+module tbench_top;
+
+reg [31:0] A, B, S;

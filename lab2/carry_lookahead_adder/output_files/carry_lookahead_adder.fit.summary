@@ -1,0 +1,16 @@
+Fitter Status : Successful - Fri Oct 11 12:58:10 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : carry_lookahead_adder
+Top-level Entity Name : adder_top
+Family : Cyclone IV E
+Device : EP4CE6F17C6
+Timing Models : Final
+Total logic elements : 97 / 6,272 ( 2 % )
+    Total combinational functions : 77 / 6,272 ( 1 % )
+    Dedicated logic registers : 96 / 6,272 ( 2 % )
+Total registers : 96
+Total pins : 97 / 180 ( 54 % )
+Total virtual pins : 0
+Total memory bits : 0 / 276,480 ( 0 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )
