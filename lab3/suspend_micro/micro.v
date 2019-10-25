@@ -19,7 +19,8 @@ wire jump, conditional_jump, i_mux_select, y_reg_select, x_reg_select;  // made 
 reg sync_reset;
 
 //// BEGIN CHANGES FROM CME 433 LAB 3 ////
-wire hold_out, pm_data_or_NOP;
+wire hold_out;
+reg [7:0] pm_data_or_NOP;
 
 always @ *
 if ( hold_out == 1'b1 )
