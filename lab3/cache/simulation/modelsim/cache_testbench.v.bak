@@ -18,7 +18,6 @@ initial begin
   rdoffset = 5'b0;
   wroffset = 5'b0;
   wren = 1'b0;
-  q = 8'b0;
   forever #5 clk = ~clk;
 end
 
@@ -29,27 +28,51 @@ end
 
 
 initial begin
-// TEST WRITING - WREN DISABLED
-@( posedge clk );			// 5ns
-@( posedge clk ) begin			// 15ns
+// TEST WRITING 22 TO PTR 2 - WREN DISABLED
+@( posedge clk );			// 5us
+@( posedge clk ) begin			// 15us
   wren = 1'b0;
-  wroffset = 5'd1;
+  wroffset = 5'd2;
   data = 8'd22;
 end
 
-// TEST WRITING - WREN ENABLED
-@( posedge clk );			// 25ns
-@( posedge clk ) begin			// 35ns
+// TEST WRITING 25 TO PTR 2 - WREN ENABLED
+@( posedge clk );			// 25us
+@( posedge clk ) begin			// 35us
   wren = 1'b1;
   wroffset = 5'd2;
   data = 8'd25;
 end
 
-// TEST READING
-@( posedge clk );			// 45ns
-@( posedge clk ) begin			// 55ns
+// TEST READING 25 FROM PTR 2
+@( posedge clk );			// 45us
+@( posedge clk ) begin			// 55us
+  wren = 1'b0;
   rdoffset = 5'd2;
 end
+
+// TEST WRITING 10,15,20,... TO PTR 3,4,5,... - WREN ENABLED
+@( posedge clk ) begin			// 65us
+  wren = 1'b1;
+  data = 8'd10;
+  wroffset = 5'd3;
+end
+repeat(15) begin
+  @( posedge clk );			// 75us,85us,...,215us
+  data = data + 8'd5;
+  wroffset = wroffset + 5'd1;
+end
+
+// TEST READING 10,15,20,... FROM PTR 3,4,5,...
+@( posedge clk ) begin			// 225us
+  wren = 1'b0;
+  rdoffset = 5'd3;
+end
+repeat(15) begin
+  @( posedge clk );			// 235us,245us,...,375us
+  rdoffset = rdoffset + 5'd1;
+end
+
 
 end
 

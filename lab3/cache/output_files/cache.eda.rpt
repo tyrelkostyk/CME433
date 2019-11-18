@@ -1,5 +1,5 @@
 EDA Netlist Writer report for cache
-Mon Nov 18 13:37:52 2019
+Mon Nov 18 14:24:16 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -36,7 +36,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Nov 18 13:37:52 2019 ;
+; EDA Netlist Writer Status ; Successful - Mon Nov 18 14:24:16 2019 ;
 ; Revision Name             ; cache                                 ;
 ; Top-level Entity Name     ; cache                                 ;
 ; Family                    ; Cyclone IV E                          ;
@@ -71,12 +71,12 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------------+
 ; Generated Files                                                                            ;
 +--------------------------------------------------------------------------------------------+
-; /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_6_1200mv_85c_slow.vo     ;
-; /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_6_1200mv_0c_slow.vo      ;
+; /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_7_1200mv_85c_slow.vo     ;
+; /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_7_1200mv_0c_slow.vo      ;
 ; /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_min_1200mv_0c_fast.vo    ;
 ; /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache.vo                       ;
-; /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_6_1200mv_85c_v_slow.sdo  ;
-; /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_6_1200mv_0c_v_slow.sdo   ;
+; /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_7_1200mv_85c_v_slow.sdo  ;
+; /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_7_1200mv_0c_v_slow.sdo   ;
 ; /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_min_1200mv_0c_v_fast.sdo ;
 ; /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_v.sdo                    ;
 +--------------------------------------------------------------------------------------------+
@@ -88,20 +88,20 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Mon Nov 18 13:37:51 2019
+    Info: Processing started: Mon Nov 18 14:24:15 2019
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off cache -c cache
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file cache_6_1200mv_85c_slow.vo in folder "/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file cache_6_1200mv_0c_slow.vo in folder "/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file cache_7_1200mv_85c_slow.vo in folder "/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file cache_7_1200mv_0c_slow.vo in folder "/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file cache_min_1200mv_0c_fast.vo in folder "/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file cache.vo in folder "/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file cache_6_1200mv_85c_v_slow.sdo in folder "/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/" for EDA simulation tool
-Info (204019): Generated file cache_6_1200mv_0c_v_slow.sdo in folder "/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file cache_7_1200mv_85c_v_slow.sdo in folder "/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file cache_7_1200mv_0c_v_slow.sdo in folder "/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file cache_min_1200mv_0c_v_fast.sdo in folder "/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/" for EDA simulation tool
 Info (204019): Generated file cache_v.sdo in folder "/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 1164 megabytes
-    Info: Processing ended: Mon Nov 18 13:37:52 2019
+    Info: Peak virtual memory: 1173 megabytes
+    Info: Processing ended: Mon Nov 18 14:24:16 2019
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

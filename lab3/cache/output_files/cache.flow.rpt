@@ -1,5 +1,5 @@
 Flow report for cache
-Mon Nov 18 13:37:52 2019
+Mon Nov 18 14:24:16 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,22 +40,22 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Mon Nov 18 13:37:52 2019           ;
+; Flow Status                        ; Successful - Mon Nov 18 14:24:16 2019           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                      ; cache                                           ;
 ; Top-level Entity Name              ; cache                                           ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 206 / 6,272 ( 3 % )                             ;
-;     Total combinational functions  ; 206 / 6,272 ( 3 % )                             ;
-;     Dedicated logic registers      ; 0 / 6,272 ( 0 % )                               ;
-; Total registers                    ; 0                                               ;
-; Total pins                         ; 28 / 92 ( 30 % )                                ;
-; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 512 / 276,480 ( < 1 % )                         ;
-; Embedded Multiplier 9-bit elements ; 0 / 30 ( 0 % )                                  ;
-; Total PLLs                         ; 0 / 2 ( 0 % )                                   ;
-; Device                             ; EP4CE6E22C6                                     ;
+; Device                             ; EP4CE115F29C7                                   ;
 ; Timing Models                      ; Final                                           ;
+; Total logic elements               ; 206 / 114,480 ( < 1 % )                         ;
+;     Total combinational functions  ; 206 / 114,480 ( < 1 % )                         ;
+;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                             ;
+; Total registers                    ; 0                                               ;
+; Total pins                         ; 28 / 529 ( 5 % )                                ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 512 / 3,981,312 ( < 1 % )                       ;
+; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                 ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
 +------------------------------------+-------------------------------------------------+
 
 
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/18/2019 13:37:23 ;
+; Start date & time ; 11/18/2019 14:23:33 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; cache               ;
 +-------------------+---------------------+
@@ -75,10 +75,12 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 345046515796.157410584304342           ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 345046515796.157410861307557           ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; --          ; Top            ;
@@ -91,12 +93,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 1055 MB             ; 00:00:32                           ;
-; Fitter               ; 00:00:05     ; 1.0                     ; 1358 MB             ; 00:00:06                           ;
-; Assembler            ; 00:00:01     ; 1.0                     ; 923 MB              ; 00:00:01                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 928 MB              ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1164 MB             ; 00:00:01                           ;
-; Total                ; 00:00:24     ; --                      ; --                  ; 00:00:42                           ;
+; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 1054 MB             ; 00:00:33                           ;
+; Fitter               ; 00:00:14     ; 1.0                     ; 1570 MB             ; 00:00:18                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 935 MB              ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 1008 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1173 MB             ; 00:00:01                           ;
+; Total                ; 00:00:37     ; --                      ; --                  ; 00:00:57                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
