@@ -1,0 +1,73 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/tck290/engr-ece
+vcache
+Z0 !s110 1574107810
+!i10b 1
+!s100 SiU]KhZKa0>:>C5>52d=I2
+IFD>GTXU^N9f@3lO7kCbX71
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+Z2 d/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim
+Z3 w1574105872
+Z4 8/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache.vo
+Z5 F/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache.vo
+L0 31
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1574107810.000000
+Z8 !s107 /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache.vo|
+Z9 !s90 -reportprogress|300|-work|work|-stats=none|/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache.vo|
+!i113 1
+Z10 o-work work
+Z11 tCvgOpt 0
+vcache_testbench
+!s110 1574107811
+!i10b 1
+!s100 J?m0>J<AALg1o^@DO3Dzi0
+IekOAZeRHogMaX[6C4h2:43
+R1
+R2
+w1574107808
+8/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_testbench.v
+F/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_testbench.v
+L0 4
+R6
+r1
+!s85 0
+31
+R7
+!s107 /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_testbench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_testbench.v|
+!i113 1
+R10
+R11
+vhard_block
+R0
+!i10b 1
+!s100 =e2]XC_G]ifYi;Si@WeY21
+IbkW]GDQkV;Tz5I<eE:CZ63
+R1
+R2
+R3
+R4
+R5
+L0 4977
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11

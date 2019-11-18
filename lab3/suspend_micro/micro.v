@@ -9,7 +9,9 @@ module micro (
 	output [8:0] register_enables,
 	output [7:0] from_CU,
 	output [3:0] x0, x1, y0, y1, r, m, i,
-	output zero_flag
+	output zero_flag,
+	output hold_out, hold, start_hold, end_hold, 	// CME 433
+	output [7:0] hold_count     							// CME 433
 	);
 
 //wire [8:0] register_enables;				// made outputs for final exam
@@ -19,12 +21,12 @@ wire jump, conditional_jump, i_mux_select, y_reg_select, x_reg_select;  // made 
 reg sync_reset;
 
 //// BEGIN CHANGES FROM CME 433 LAB 3 ////
-wire hold_out;
+//wire hold_out; made output
 reg [7:0] pm_data_or_NOP;
 
 always @ *
 if ( hold_out == 1'b1 )
-	pm_data_or_NOP = NOPC8;
+	pm_data_or_NOP = 8'hc8;
 else
 	pm_data_or_NOP = pm_data;
 
@@ -53,7 +55,11 @@ program_sequencer prog_sequencer(
 	.NOPDF(NOPDF),
 	.pc(pc),
 	.from_PS(from_PS),
-	.hold_out(hold_out) 		// CME 433
+	.hold_out(hold_out),			// CME 433
+	.hold_count(hold_count), 	// CME 433
+	.hold(hold),				 	// CME 433
+	.start_hold(start_hold), 	// CME 433
+	.end_hold(end_hold), 	// CME 433
 	);
 
 

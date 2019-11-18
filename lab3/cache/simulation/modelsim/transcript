@@ -1,0 +1,188 @@
+# Loading project cache_testbench
+# Compile of cache.vo was successful.
+# Compile of cache_testbench.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim work.cache_testbench -L altera_mf_ver -L cycloneive_ver -L altera_mf -L altera_ver
+# vsim work.cache_testbench -L altera_mf_ver -L cycloneive_ver -L altera_mf -L altera_ver 
+# Start time: 13:59:39 on Nov 18,2019
+# Loading work.cache_testbench
+# Loading work.cache
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# SDF 10.5b Compiler 2016.10 Oct  5 2016
+# Loading instances from cache_v.sdo
+# Loading timing data from cache_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /cache_testbench File: /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_testbench.v
+add wave -position insertpoint  \
+sim:/cache_testbench/clk \
+sim:/cache_testbench/data \
+sim:/cache_testbench/rdoffset \
+sim:/cache_testbench/wroffset \
+sim:/cache_testbench/wren \
+sim:/cache_testbench/q
+# Compile of cache.vo was successful.
+# Compile of cache_testbench.v was successful.
+# 2 compiles, 0 failed with no errors.
+run -all
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1817 ps, d:1834 ps, 187 ps );
+#    Time: 1834 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a136 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1817 ps, d:1842 ps, 187 ps );
+#    Time: 1842 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a136 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1805 ps, d:1846 ps, 187 ps );
+#    Time: 1846 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a96 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1806 ps, d:1857 ps, 187 ps );
+#    Time: 1857 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a144 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1805 ps, d:1869 ps, 187 ps );
+#    Time: 1869 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a96 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1807 ps, d:1881 ps, 187 ps );
+#    Time: 1881 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a128 /datain_a_register
+# Break key hit
+# Break in Module cycloneive_ram_block at /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v line 5385
+# Error opening /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v
+# Path name '/build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v' doesn't exist.
+# Compile of cache.vo was successful.
+# Compile of cache_testbench.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -L altera_mf_ver -L cycloneive_ver -L altera_mf -L altera_ver work.cache_testbench
+# End time: 14:01:30 on Nov 18,2019, Elapsed time: 0:01:51
+# Errors: 7, Warnings: 0
+# vsim -L altera_mf_ver -L cycloneive_ver -L altera_mf -L altera_ver work.cache_testbench 
+# Start time: 14:01:30 on Nov 18,2019
+# Loading work.cache_testbench
+# Loading work.cache
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# Loading instances from cache_v.sdo
+# Loading timing data from cache_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /cache_testbench File: /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_testbench.v
+add wave -position insertpoint  \
+sim:/cache_testbench/clk \
+sim:/cache_testbench/data \
+sim:/cache_testbench/rdoffset \
+sim:/cache_testbench/wroffset \
+sim:/cache_testbench/wren \
+sim:/cache_testbench/q
+run -all
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1817 ps, d:1834 ps, 187 ps );
+#    Time: 1834 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a136 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1817 ps, d:1842 ps, 187 ps );
+#    Time: 1842 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a136 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1805 ps, d:1846 ps, 187 ps );
+#    Time: 1846 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a96 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1806 ps, d:1857 ps, 187 ps );
+#    Time: 1857 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a144 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1805 ps, d:1869 ps, 187 ps );
+#    Time: 1869 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a96 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1807 ps, d:1881 ps, 187 ps );
+#    Time: 1881 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a128 /datain_a_register
+# ** Note: $stop    : /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_testbench.v(26)
+#    Time: 100 ns  Iteration: 0  Instance: /cache_testbench
+# Break in Module cache_testbench at /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_testbench.v line 26
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/wave.do
+# Compile of cache.vo was successful.
+# Compile of cache_testbench.v failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+vsim -L altera_mf_ver -L cycloneive_ver -L altera_mf -L altera_ver work.cache_testbench
+# End time: 14:04:40 on Nov 18,2019, Elapsed time: 0:03:10
+# Errors: 6, Warnings: 0
+# vsim -L altera_mf_ver -L cycloneive_ver -L altera_mf -L altera_ver work.cache_testbench 
+# Start time: 14:04:40 on Nov 18,2019
+# Loading work.cache_testbench
+# Loading work.cache
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# Loading instances from cache_v.sdo
+# Loading timing data from cache_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /cache_testbench File: /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_testbench.v
+do wave.do
+run -all
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1817 ps, d:1834 ps, 187 ps );
+#    Time: 1834 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a136 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1817 ps, d:1842 ps, 187 ps );
+#    Time: 1842 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a136 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1805 ps, d:1846 ps, 187 ps );
+#    Time: 1846 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a96 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1806 ps, d:1857 ps, 187 ps );
+#    Time: 1857 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a144 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1805 ps, d:1869 ps, 187 ps );
+#    Time: 1869 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a96 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1807 ps, d:1881 ps, 187 ps );
+#    Time: 1881 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a128 /datain_a_register
+# ** Note: $stop    : /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_testbench.v(26)
+#    Time: 100 ns  Iteration: 0  Instance: /cache_testbench
+# Break in Module cache_testbench at /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_testbench.v line 26
+# Compile of cache.vo was successful.
+# Compile of cache_testbench.v failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Load canceled
+# Compile of cache.vo was successful.
+# Compile of cache_testbench.v failed with 1 errors.
+# 2 compiles, 1 failed with 1 error.
+# Compile of cache.vo was successful.
+# Compile of cache_testbench.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -L altera_mf_ver -L cycloneive_ver -L altera_mf -L altera_ver work.cache_testbench
+# End time: 14:10:17 on Nov 18,2019, Elapsed time: 0:05:37
+# Errors: 7, Warnings: 0
+# vsim -L altera_mf_ver -L cycloneive_ver -L altera_mf -L altera_ver work.cache_testbench 
+# Start time: 14:10:17 on Nov 18,2019
+# Loading work.cache_testbench
+# Loading work.cache
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# Loading instances from cache_v.sdo
+# Loading timing data from cache_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /cache_testbench File: /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_testbench.v
+do wave.do
+run -all
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1817 ps, d:1834 ps, 187 ps );
+#    Time: 1834 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a136 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1817 ps, d:1842 ps, 187 ps );
+#    Time: 1842 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a136 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1805 ps, d:1846 ps, 187 ps );
+#    Time: 1846 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a96 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1806 ps, d:1857 ps, 187 ps );
+#    Time: 1857 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a144 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1805 ps, d:1869 ps, 187 ps );
+#    Time: 1869 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a96 /datain_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:1807 ps, d:1881 ps, 187 ps );
+#    Time: 1881 ps  Iteration: 0  Instance: /cache_testbench/dual_port_ram/\DPR|altsyncram_component|auto_generated|ram_block1a128 /datain_a_register
+# ** Note: $stop    : /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_testbench.v(26)
+#    Time: 100 us  Iteration: 0  Instance: /cache_testbench
+# Break in Module cache_testbench at /home/tck290/engr-ece/CME433/lab3/cache/simulation/modelsim/cache_testbench.v line 26

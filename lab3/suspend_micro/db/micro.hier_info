@@ -107,6 +107,18 @@ i[1] <= i[1].DB_MAX_OUTPUT_PORT_TYPE
 i[2] <= i[2].DB_MAX_OUTPUT_PORT_TYPE
 i[3] <= i[3].DB_MAX_OUTPUT_PORT_TYPE
 zero_flag <= zero_flag.DB_MAX_OUTPUT_PORT_TYPE
+hold_out <= program_sequencer:prog_sequencer.hold_out
+hold <= program_sequencer:prog_sequencer.hold
+start_hold <= program_sequencer:prog_sequencer.start_hold
+end_hold <= program_sequencer:prog_sequencer.end_hold
+hold_count[0] <= program_sequencer:prog_sequencer.hold_count
+hold_count[1] <= program_sequencer:prog_sequencer.hold_count
+hold_count[2] <= program_sequencer:prog_sequencer.hold_count
+hold_count[3] <= program_sequencer:prog_sequencer.hold_count
+hold_count[4] <= program_sequencer:prog_sequencer.hold_count
+hold_count[5] <= program_sequencer:prog_sequencer.hold_count
+hold_count[6] <= program_sequencer:prog_sequencer.hold_count
+hold_count[7] <= program_sequencer:prog_sequencer.hold_count
 
 
 |micro|program_memory:prog_mem
@@ -270,21 +282,12 @@ clk => pc[4]~reg0.CLK
 clk => pc[5]~reg0.CLK
 clk => pc[6]~reg0.CLK
 clk => pc[7]~reg0.CLK
-clk => hold_out~reg0.CLK
-clk => hold.CLK
-clk => end_hold.CLK
-clk => hold_count[0].CLK
-clk => hold_count[1].CLK
-clk => hold_count[2].CLK
-clk => hold_count[3].CLK
-clk => hold_count[4].CLK
-clk => hold_count[5].CLK
-clk => hold_count[6].CLK
-clk => hold_count[7].CLK
-clk => start_hold.CLK
-sync_reset => hold_count.OUTPUTSELECT
-sync_reset => hold_count.OUTPUTSELECT
-sync_reset => hold_count.OUTPUTSELECT
+clk => hold~reg0.CLK
+clk => hold_count[0]~reg0.CLK
+clk => hold_count[1]~reg0.CLK
+clk => hold_count[2]~reg0.CLK
+clk => hold_count[3]~reg0.CLK
+clk => hold_count[4]~reg0.CLK
 sync_reset => hold_count.OUTPUTSELECT
 sync_reset => hold_count.OUTPUTSELECT
 sync_reset => hold_count.OUTPUTSELECT
@@ -345,7 +348,15 @@ from_PS[4] <= pc[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 from_PS[5] <= pc[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 from_PS[6] <= pc[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 from_PS[7] <= pc[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
-hold_out <= hold_out~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hold_out <= always4.DB_MAX_OUTPUT_PORT_TYPE
+start_hold <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+end_hold <= always2.DB_MAX_OUTPUT_PORT_TYPE
+hold <= hold~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hold_count[0] <= hold_count[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hold_count[1] <= hold_count[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hold_count[2] <= hold_count[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hold_count[3] <= hold_count[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+hold_count[4] <= hold_count[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |micro|instruction_decoder:intr_decoder

@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/tck290/engr-ece
+vfinal_exam_testbench
+!s110 1572558665
+!i10b 1
+!s100 dQ<?h]X>hT^a[QhY?MzUl3
+II6YkO=]=oT8Ve^K0P`Yld3
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+Z1 d/home/tck290/engr-ece/CME433/lab3/suspend_micro/simulation/modelsim
+w1571951488
+8/home/tck290/engr-ece/CME341/final_exam/micro_final_exam/simulation/modelsim/final_exam_test_bench.v
+F/home/tck290/engr-ece/CME341/final_exam/micro_final_exam/simulation/modelsim/final_exam_test_bench.v
+L0 2
+Z2 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1572558665.000000
+!s107 /home/tck290/engr-ece/CME341/final_exam/micro_final_exam/simulation/modelsim/final_exam_test_bench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tck290/engr-ece/CME341/final_exam/micro_final_exam/simulation/modelsim/final_exam_test_bench.v|
+!i113 1
+Z3 o-work work
+Z4 tCvgOpt 0
+vhard_block
+Z5 !s110 1572650348
+!i10b 1
+!s100 mfmIMRF3Gz0EVd3V]P3KZ2
+I9h>nR>:<RTN=U@oG=f8eC2
+R0
+R1
+Z6 w1572649800
+Z7 8/home/tck290/engr-ece/CME433/lab3/suspend_micro/simulation/modelsim/micro.vo
+Z8 F/home/tck290/engr-ece/CME433/lab3/suspend_micro/simulation/modelsim/micro.vo
+L0 7240
+R2
+r1
+!s85 0
+31
+Z9 !s108 1572650348.000000
+Z10 !s107 /home/tck290/engr-ece/CME433/lab3/suspend_micro/simulation/modelsim/micro.vo|
+Z11 !s90 -reportprogress|300|-work|work|-stats=none|/home/tck290/engr-ece/CME433/lab3/suspend_micro/simulation/modelsim/micro.vo|
+!i113 1
+R3
+R4
+vmicro
+R5
+!i10b 1
+!s100 iG;DSE:lV7iXk81AoHdlG2
+I8GVPi1a1Y6SJ:>8QiYcL:3
+R0
+R1
+R6
+R7
+R8
+L0 31
+R2
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R3
+R4
+vmicroprocessor_tb
+R5
+!i10b 1
+!s100 6m>>a3LnmKLI@@nLDPFjJ3
+IfOX@5LlEEUM`Z2?monm5I2
+R0
+R1
+w1572650339
+8/home/tck290/engr-ece/CME433/lab3/suspend_micro/simulation/modelsim/microprocessor_tb.v
+F/home/tck290/engr-ece/CME433/lab3/suspend_micro/simulation/modelsim/microprocessor_tb.v
+L0 3
+R2
+r1
+!s85 0
+31
+R9
+!s107 /home/tck290/engr-ece/CME433/lab3/suspend_micro/simulation/modelsim/microprocessor_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tck290/engr-ece/CME433/lab3/suspend_micro/simulation/modelsim/microprocessor_tb.v|
+!i113 1
+R3
+R4

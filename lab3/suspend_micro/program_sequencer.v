@@ -5,16 +5,17 @@ module program_sequencer(
 	output reg [7:0] pm_addr,
 	output reg [7:0] pc,							// made output for final exam (instead of internal)
 	output reg [7:0] from_PS,					// made specifically for final exam scrambler
-	output reg hold_out
+	output reg hold_out, start_hold, end_hold, hold,
+	output reg [4:0] hold_count
 	);
 
 
 
 //// BEGIN CHANGES FROM CME 433 LAB 3 ////
-reg start_hold, end_hold, hold;
-reg [7:0] hold_count;
+//reg start_hold, end_hold, hold;			made output
+//reg [7:0] hold_count; 						made output
 
-always @ ( posedge clk )
+always @ *
 if ( pc[7:5] != pm_addr[7:5] )
 	start_hold = 1'b1;
 else
@@ -23,13 +24,15 @@ else
 always @ ( posedge clk )
 if ( sync_reset == 1'b1 ) 
 	hold_count = 8'd0;
-else if ( ( start_hold == 1'b1 ) && ( hold_count <= 8'd31 ) )
+else if ( end_hold == 1'b1 )
+	hold_count = 1'b0;
+else if ( hold == 1'b1 )
 	hold_count = hold_count + 8'd1;
 else
 	hold_count = hold_count;
 
-always @ ( posedge clk )
-if ( ( hold_count == 8'd31 ) && ( hold == 1'b1 ) )
+always @ *
+if ( ( hold_count >= 8'd31 ) && ( hold == 1'b1 ) )
 	end_hold = 1'b1;
 else
 	end_hold = 1'b0;
@@ -44,7 +47,7 @@ else if ( end_hold == 1'b1 )
 else
 	hold = hold;
 
-always @ ( posedge clk )
+always @ *
 if ( ( ( start_hold == 1'b1 ) || ( hold == 1'b1 ) ) && ( end_hold != 1'b1 ) )
 	hold_out = 1'b1;
 else
@@ -58,7 +61,7 @@ always @ *
 from_PS = pc;		// testing prior to exam
 
 always @ (posedge clk)
-if ( hold == 1'b1 )
+if ( hold == 1'b1 )				// CME 433
 	pc = pc;
 else
 	pc = pm_addr;
@@ -66,6 +69,8 @@ else
 always @ *
 if (sync_reset == 1'b1) 
 	pm_addr = 8'd0;
+else if ( hold == 1'b1 )
+	pm_addr = pc; 
 else if (jmp == 1'b1) 
 	pm_addr = {jmp_addr, 4'd0};
 else if ((jmp_nz == 1'b1) && (dont_jmp == 1'b0)) 
