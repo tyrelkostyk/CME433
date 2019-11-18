@@ -28,9 +28,28 @@ always @ *
 if ( hold_out == 1'b1 )
 	pm_data_or_NOP = 8'hc8;
 else
-	pm_data_or_NOP = pm_data;
+//	pm_data_or_NOP = pm_data;		// CME 433 Lab 4
+	pm_data_or_NOP = cache_q;		// CME 433 Lab 4
 
-//// END CHANGES FROM CME 433 LAB 3 ////
+////  END CHANGES FROM CME 433 LAB 3  ////
+
+
+//// BEGIN CHANGES FROM CME 433 LAB 4 ////
+wire [4:0] cache_wroffset, cache_rdoffset;
+wire cache_wren;
+wire [7:0] cache_q;
+
+cache single_line_cache(
+	.clk(clk),
+	.data(pm_data),
+	.rdoffset(cache_rdoffset),
+	.wroffset(cache_wroffset),
+	.wren(cache_wren),
+	.q(cache_q)
+);
+
+////  END CHANGES FROM CME 433 LAB 4  ////
+
 
 always @ (posedge clk)
 sync_reset = reset;
@@ -45,7 +64,8 @@ program_memory prog_mem(
 program_sequencer prog_sequencer(
 	.clk(clk),
 	.sync_reset(sync_reset),
-	.pm_addr(pm_address),
+//	.pm_addr(pm_address),		// CME 433 Lab 4
+	.rom_address(pm_address),	// CME 433 Lab 4
 	.jmp(jump),
 	.jmp_nz(conditional_jump),
 	.jmp_addr(LS_nibble_ir),
@@ -61,6 +81,9 @@ program_sequencer prog_sequencer(
 	.hold(hold),				 	// CME 433 Lab 3
 	.start_hold(start_hold), 	// CME 433 Lab 3
 	.end_hold(end_hold), 		// CME 433 Lab 3
+	.cache_wroffset(cache_wroffset),	// CME 433 Lab 4
+	.cache_rdoffset(cache_rdoffset),	// CME 433 Lab 4
+	.cache_wren(cache_wren)				// CME 433 Lab 4
 );
 
 
@@ -123,15 +146,6 @@ data_memory data_mem(
 	.wren(register_enables[7])
 );
 
-
-cache single_line_cache(
-	.clk(),
-	.data(),
-	.rdoffset(),
-	.wroffset(),
-	.wren(),
-	.q()
-);
 	
 endmodule
 

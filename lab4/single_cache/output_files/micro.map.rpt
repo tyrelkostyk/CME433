@@ -1,0 +1,1146 @@
+Analysis & Synthesis report for micro
+Mon Nov 18 16:10:21 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Source assignments for cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated
+ 13. Source assignments for program_memory:prog_mem|altsyncram:altsyncram_component|altsyncram_inb1:auto_generated
+ 14. Source assignments for data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_8ag1:auto_generated
+ 15. Parameter Settings for User Entity Instance: cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component
+ 16. Parameter Settings for User Entity Instance: program_memory:prog_mem|altsyncram:altsyncram_component
+ 17. Parameter Settings for User Entity Instance: data_memory:data_mem|altsyncram:altsyncram_component
+ 18. altsyncram Parameter Settings by Entity Instance
+ 19. Port Connectivity Checks: "computational_unit:comp_unit"
+ 20. Port Connectivity Checks: "program_sequencer:prog_sequencer"
+ 21. Port Connectivity Checks: "cache:single_line_cache|dual_port_ram:DPR"
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++--------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                         ;
++------------------------------------+-------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Mon Nov 18 16:10:21 2019           ;
+; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
+; Revision Name                      ; micro                                           ;
+; Top-level Entity Name              ; micro                                           ;
+; Family                             ; Cyclone IV E                                    ;
+; Total logic elements               ; 2                                               ;
+;     Total combinational functions  ; 1                                               ;
+;     Dedicated logic registers      ; 1                                               ;
+; Total registers                    ; 1                                               ;
+; Total pins                         ; 120                                             ;
+; Total virtual pins                 ; 0                                               ;
+; Total memory bits                  ; 16                                              ;
+; Embedded Multiplier 9-bit elements ; 0                                               ;
+; Total PLLs                         ; 0                                               ;
++------------------------------------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; micro              ; micro              ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
++----------------------------+-------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                              ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------+---------+
+; dual_port_ram.v                  ; yes             ; User Wizard-Generated File             ; /home/tck290/engr-ece/CME433/lab4/single_cache/dual_port_ram.v              ;         ;
+; data_memory.v                    ; yes             ; User Wizard-Generated File             ; /home/tck290/engr-ece/CME433/lab4/single_cache/data_memory.v                ;         ;
+; program_memory.v                 ; yes             ; User Wizard-Generated File             ; /home/tck290/engr-ece/CME433/lab4/single_cache/program_memory.v             ;         ;
+; micro.v                          ; yes             ; User Verilog HDL File                  ; /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v                      ;         ;
+; computational_unit.v             ; yes             ; User Verilog HDL File                  ; /home/tck290/engr-ece/CME433/lab4/single_cache/computational_unit.v         ;         ;
+; cache.v                          ; yes             ; User Verilog HDL File                  ; /home/tck290/engr-ece/CME433/lab4/single_cache/cache.v                      ;         ;
+; instruction_decoder.v            ; yes             ; User Verilog HDL File                  ; /home/tck290/engr-ece/CME433/lab4/single_cache/instruction_decoder.v        ;         ;
+; program_sequencer.v              ; yes             ; User Verilog HDL File                  ; /home/tck290/engr-ece/CME433/lab4/single_cache/program_sequencer.v          ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/altsyncram.tdf          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc   ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/lpm_mux.inc             ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/lpm_decode.inc          ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/aglobal181.inc          ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/a_rdenreg.inc           ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/altrom.inc              ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/altram.inc              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; /opt/intelFPGA/18.1/quartus/libraries/megafunctions/altdpram.inc            ;         ;
+; db/altsyncram_o8q1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf       ;         ;
+; db/altsyncram_inb1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_inb1.tdf       ;         ;
+; computational_test_Lab34.hex     ; yes             ; Auto-Found Memory Initialization File  ; /home/tck290/engr-ece/CME433/lab4/single_cache/computational_test_Lab34.hex ;         ;
+; db/altsyncram_8ag1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_8ag1.tdf       ;         ;
++----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary              ;
++---------------------------------------------+------------+
+; Resource                                    ; Usage      ;
++---------------------------------------------+------------+
+; Estimated Total logic elements              ; 2          ;
+;                                             ;            ;
+; Total combinational functions               ; 1          ;
+; Logic element usage by number of LUT inputs ;            ;
+;     -- 4 input functions                    ; 0          ;
+;     -- 3 input functions                    ; 0          ;
+;     -- <=2 input functions                  ; 1          ;
+;                                             ;            ;
+; Logic elements by mode                      ;            ;
+;     -- normal mode                          ; 1          ;
+;     -- arithmetic mode                      ; 0          ;
+;                                             ;            ;
+; Total registers                             ; 1          ;
+;     -- Dedicated logic registers            ; 1          ;
+;     -- I/O registers                        ; 0          ;
+;                                             ;            ;
+; I/O pins                                    ; 120        ;
+; Total memory bits                           ; 16         ;
+;                                             ;            ;
+; Embedded Multiplier 9-bit elements          ; 0          ;
+;                                             ;            ;
+; Maximum fan-out node                        ; sync_reset ;
+; Maximum fan-out                             ; 15         ;
+; Total fan-out                               ; 161        ;
+; Average fan-out                             ; 0.64       ;
++---------------------------------------------+------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                   ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                           ; Entity Name     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+-----------------+--------------+
+; |micro                                    ; 1 (1)               ; 1 (1)                     ; 16          ; 0            ; 0       ; 0         ; 120  ; 0            ; |micro                                                                                        ; micro           ; work         ;
+;    |program_memory:prog_mem|              ; 0 (0)               ; 0 (0)                     ; 16          ; 0            ; 0       ; 0         ; 0    ; 0            ; |micro|program_memory:prog_mem                                                                ; program_memory  ; work         ;
+;       |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 16          ; 0            ; 0       ; 0         ; 0    ; 0            ; |micro|program_memory:prog_mem|altsyncram:altsyncram_component                                ; altsyncram      ; work         ;
+;          |altsyncram_inb1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 16          ; 0            ; 0       ; 0         ; 0    ; 0            ; |micro|program_memory:prog_mem|altsyncram:altsyncram_component|altsyncram_inb1:auto_generated ; altsyncram_inb1 ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                  ;
++---------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------------+
+; Name                                                                                              ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size ; MIF                          ;
++---------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------------+
+; program_memory:prog_mem|altsyncram:altsyncram_component|altsyncram_inb1:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 256          ; 8            ; --           ; --           ; 2048 ; computational_test_Lab34.hex ;
++---------------------------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+------+------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                  ;
++-------------------------------------------------------+---------------------------------------------+
+; Register name                                         ; Reason for Removal                          ;
++-------------------------------------------------------+---------------------------------------------+
+; program_sequencer:prog_sequencer|cache_wroffset[0]    ; Stuck at GND due to stuck port data_in      ;
+; program_sequencer:prog_sequencer|cache_wren           ; Stuck at VCC due to stuck port data_in      ;
+; program_sequencer:prog_sequencer|from_PS[0,1,3,4,7]   ; Stuck at GND due to stuck port clock_enable ;
+; program_sequencer:prog_sequencer|cache_wroffset[1..4] ; Stuck at GND due to stuck port data_in      ;
+; program_sequencer:prog_sequencer|from_PS[2,5,6]       ; Stuck at GND due to stuck port clock_enable ;
+; instruction_decoder:intr_decoder|ir[6,7]              ; Stuck at VCC due to stuck port data_in      ;
+; instruction_decoder:intr_decoder|ir[4,5]              ; Stuck at GND due to stuck port data_in      ;
+; instruction_decoder:intr_decoder|ir[3]                ; Stuck at VCC due to stuck port data_in      ;
+; instruction_decoder:intr_decoder|ir[0..2]             ; Stuck at GND due to stuck port data_in      ;
+; computational_unit:comp_unit|r[3]                     ; Stuck at GND due to stuck port data_in      ;
+; computational_unit:comp_unit|from_CU[0]               ; Stuck at GND due to stuck port data_in      ;
+; computational_unit:comp_unit|r[0..2]                  ; Stuck at GND due to stuck port data_in      ;
+; computational_unit:comp_unit|from_CU[1..3]            ; Stuck at GND due to stuck port data_in      ;
+; computational_unit:comp_unit|m[3]                     ; Stuck at GND due to stuck port data_in      ;
+; computational_unit:comp_unit|from_CU[4]               ; Stuck at GND due to stuck port data_in      ;
+; computational_unit:comp_unit|m[2]                     ; Stuck at GND due to stuck port data_in      ;
+; computational_unit:comp_unit|y0[0]                    ; Stuck at GND due to stuck port data_in      ;
+; computational_unit:comp_unit|y1[0]                    ; Stuck at GND due to stuck port data_in      ;
+; computational_unit:comp_unit|m[0,1]                   ; Stuck at GND due to stuck port data_in      ;
+; computational_unit:comp_unit|o_reg[0..3]              ; Stuck at GND due to stuck port data_in      ;
+; computational_unit:comp_unit|y1[1..3]                 ; Stuck at GND due to stuck port data_in      ;
+; computational_unit:comp_unit|y0[1..3]                 ; Stuck at GND due to stuck port data_in      ;
+; computational_unit:comp_unit|from_CU[5..7]            ; Stuck at GND due to stuck port data_in      ;
+; computational_unit:comp_unit|r_eq_0                   ; Stuck at VCC due to stuck port data_in      ;
+; computational_unit:comp_unit|i[0..3]                  ; Stuck at GND due to stuck port data_in      ;
+; Total Number of Removed Registers = 55                ;                                             ;
++-------------------------------------------------------+---------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                        ;
++----------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------+
+; Register name                                      ; Reason for Removal        ; Registers Removed due to This Register                                            ;
++----------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------+
+; program_sequencer:prog_sequencer|cache_wroffset[0] ; Stuck at GND              ; instruction_decoder:intr_decoder|ir[7], instruction_decoder:intr_decoder|ir[6],   ;
+;                                                    ; due to stuck port data_in ; instruction_decoder:intr_decoder|ir[5], instruction_decoder:intr_decoder|ir[4],   ;
+;                                                    ;                           ; instruction_decoder:intr_decoder|ir[3], instruction_decoder:intr_decoder|ir[2],   ;
+;                                                    ;                           ; instruction_decoder:intr_decoder|ir[1], computational_unit:comp_unit|r[3],        ;
+;                                                    ;                           ; computational_unit:comp_unit|from_CU[0], computational_unit:comp_unit|r[1],       ;
+;                                                    ;                           ; computational_unit:comp_unit|r[0], computational_unit:comp_unit|from_CU[1],       ;
+;                                                    ;                           ; computational_unit:comp_unit|from_CU[2], computational_unit:comp_unit|from_CU[3], ;
+;                                                    ;                           ; computational_unit:comp_unit|m[3], computational_unit:comp_unit|from_CU[4],       ;
+;                                                    ;                           ; computational_unit:comp_unit|m[2], computational_unit:comp_unit|y0[0],            ;
+;                                                    ;                           ; computational_unit:comp_unit|y1[0], computational_unit:comp_unit|m[0],            ;
+;                                                    ;                           ; computational_unit:comp_unit|m[1], computational_unit:comp_unit|o_reg[3],         ;
+;                                                    ;                           ; computational_unit:comp_unit|o_reg[0], computational_unit:comp_unit|o_reg[1],     ;
+;                                                    ;                           ; computational_unit:comp_unit|o_reg[2], computational_unit:comp_unit|y1[1],        ;
+;                                                    ;                           ; computational_unit:comp_unit|y1[2], computational_unit:comp_unit|y1[3],           ;
+;                                                    ;                           ; computational_unit:comp_unit|y0[1], computational_unit:comp_unit|y0[2],           ;
+;                                                    ;                           ; computational_unit:comp_unit|y0[3], computational_unit:comp_unit|from_CU[5],      ;
+;                                                    ;                           ; computational_unit:comp_unit|from_CU[6], computational_unit:comp_unit|from_CU[7], ;
+;                                                    ;                           ; computational_unit:comp_unit|r_eq_0, computational_unit:comp_unit|i[0],           ;
+;                                                    ;                           ; computational_unit:comp_unit|i[3], computational_unit:comp_unit|i[2],             ;
+;                                                    ;                           ; computational_unit:comp_unit|i[1]                                                 ;
+; program_sequencer:prog_sequencer|cache_wren        ; Stuck at VCC              ; program_sequencer:prog_sequencer|from_PS[0],                                      ;
+;                                                    ; due to stuck port data_in ; program_sequencer:prog_sequencer|from_PS[7],                                      ;
+;                                                    ;                           ; program_sequencer:prog_sequencer|from_PS[6],                                      ;
+;                                                    ;                           ; program_sequencer:prog_sequencer|from_PS[5]                                       ;
+; program_sequencer:prog_sequencer|cache_wroffset[1] ; Stuck at GND              ; instruction_decoder:intr_decoder|ir[0]                                            ;
+;                                                    ; due to stuck port data_in ;                                                                                   ;
++----------------------------------------------------+---------------------------+-----------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Source assignments for cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                                                ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                 ;
++---------------------------------+--------------------+------+-------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------+
+; Source assignments for program_memory:prog_mem|altsyncram:altsyncram_component|altsyncram_inb1:auto_generated ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                              ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                               ;
++---------------------------------+--------------------+------+-------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Source assignments for data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_8ag1:auto_generated ;
++---------------------------------+--------------------+------+----------------------------------------------+
+; Assignment                      ; Value              ; From ; To                                           ;
++---------------------------------+--------------------+------+----------------------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                            ;
++---------------------------------+--------------------+------+----------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component ;
++------------------------------------+----------------------+------------------------------------------------------------+
+; Parameter Name                     ; Value                ; Type                                                       ;
++------------------------------------+----------------------+------------------------------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                    ; Untyped                                                    ;
+; AUTO_CARRY_CHAINS                  ; ON                   ; AUTO_CARRY                                                 ;
+; IGNORE_CARRY_BUFFERS               ; OFF                  ; IGNORE_CARRY                                               ;
+; AUTO_CASCADE_CHAINS                ; ON                   ; AUTO_CASCADE                                               ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                  ; IGNORE_CASCADE                                             ;
+; WIDTH_BYTEENA                      ; 1                    ; Untyped                                                    ;
+; OPERATION_MODE                     ; DUAL_PORT            ; Untyped                                                    ;
+; WIDTH_A                            ; 256                  ; Signed Integer                                             ;
+; WIDTHAD_A                          ; 1                    ; Signed Integer                                             ;
+; NUMWORDS_A                         ; 2                    ; Signed Integer                                             ;
+; OUTDATA_REG_A                      ; UNREGISTERED         ; Untyped                                                    ;
+; ADDRESS_ACLR_A                     ; NONE                 ; Untyped                                                    ;
+; OUTDATA_ACLR_A                     ; NONE                 ; Untyped                                                    ;
+; WRCONTROL_ACLR_A                   ; NONE                 ; Untyped                                                    ;
+; INDATA_ACLR_A                      ; NONE                 ; Untyped                                                    ;
+; BYTEENA_ACLR_A                     ; NONE                 ; Untyped                                                    ;
+; WIDTH_B                            ; 256                  ; Signed Integer                                             ;
+; WIDTHAD_B                          ; 1                    ; Signed Integer                                             ;
+; NUMWORDS_B                         ; 2                    ; Signed Integer                                             ;
+; INDATA_REG_B                       ; CLOCK1               ; Untyped                                                    ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1               ; Untyped                                                    ;
+; RDCONTROL_REG_B                    ; CLOCK1               ; Untyped                                                    ;
+; ADDRESS_REG_B                      ; CLOCK0               ; Untyped                                                    ;
+; OUTDATA_REG_B                      ; UNREGISTERED         ; Untyped                                                    ;
+; BYTEENA_REG_B                      ; CLOCK1               ; Untyped                                                    ;
+; INDATA_ACLR_B                      ; NONE                 ; Untyped                                                    ;
+; WRCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                    ;
+; ADDRESS_ACLR_B                     ; NONE                 ; Untyped                                                    ;
+; OUTDATA_ACLR_B                     ; NONE                 ; Untyped                                                    ;
+; RDCONTROL_ACLR_B                   ; NONE                 ; Untyped                                                    ;
+; BYTEENA_ACLR_B                     ; NONE                 ; Untyped                                                    ;
+; WIDTH_BYTEENA_A                    ; 32                   ; Signed Integer                                             ;
+; WIDTH_BYTEENA_B                    ; 1                    ; Untyped                                                    ;
+; RAM_BLOCK_TYPE                     ; AUTO                 ; Untyped                                                    ;
+; BYTE_SIZE                          ; 8                    ; Signed Integer                                             ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE            ; Untyped                                                    ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ ; Untyped                                                    ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ ; Untyped                                                    ;
+; INIT_FILE                          ; UNUSED               ; Untyped                                                    ;
+; INIT_FILE_LAYOUT                   ; PORT_A               ; Untyped                                                    ;
+; MAXIMUM_DEPTH                      ; 0                    ; Untyped                                                    ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS               ; Untyped                                                    ;
+; CLOCK_ENABLE_INPUT_B               ; BYPASS               ; Untyped                                                    ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL               ; Untyped                                                    ;
+; CLOCK_ENABLE_OUTPUT_B              ; BYPASS               ; Untyped                                                    ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN      ; Untyped                                                    ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN      ; Untyped                                                    ;
+; ENABLE_ECC                         ; FALSE                ; Untyped                                                    ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                    ;
+; WIDTH_ECCSTATUS                    ; 3                    ; Untyped                                                    ;
+; DEVICE_FAMILY                      ; Cyclone IV E         ; Untyped                                                    ;
+; CBXI_PARAMETER                     ; altsyncram_o8q1      ; Untyped                                                    ;
++------------------------------------+----------------------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: program_memory:prog_mem|altsyncram:altsyncram_component ;
++------------------------------------+------------------------------+----------------------------------+
+; Parameter Name                     ; Value                        ; Type                             ;
++------------------------------------+------------------------------+----------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                            ; Untyped                          ;
+; AUTO_CARRY_CHAINS                  ; ON                           ; AUTO_CARRY                       ;
+; IGNORE_CARRY_BUFFERS               ; OFF                          ; IGNORE_CARRY                     ;
+; AUTO_CASCADE_CHAINS                ; ON                           ; AUTO_CASCADE                     ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                          ; IGNORE_CASCADE                   ;
+; WIDTH_BYTEENA                      ; 1                            ; Untyped                          ;
+; OPERATION_MODE                     ; ROM                          ; Untyped                          ;
+; WIDTH_A                            ; 8                            ; Signed Integer                   ;
+; WIDTHAD_A                          ; 8                            ; Signed Integer                   ;
+; NUMWORDS_A                         ; 256                          ; Signed Integer                   ;
+; OUTDATA_REG_A                      ; UNREGISTERED                 ; Untyped                          ;
+; ADDRESS_ACLR_A                     ; NONE                         ; Untyped                          ;
+; OUTDATA_ACLR_A                     ; NONE                         ; Untyped                          ;
+; WRCONTROL_ACLR_A                   ; NONE                         ; Untyped                          ;
+; INDATA_ACLR_A                      ; NONE                         ; Untyped                          ;
+; BYTEENA_ACLR_A                     ; NONE                         ; Untyped                          ;
+; WIDTH_B                            ; 1                            ; Untyped                          ;
+; WIDTHAD_B                          ; 1                            ; Untyped                          ;
+; NUMWORDS_B                         ; 1                            ; Untyped                          ;
+; INDATA_REG_B                       ; CLOCK1                       ; Untyped                          ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                       ; Untyped                          ;
+; RDCONTROL_REG_B                    ; CLOCK1                       ; Untyped                          ;
+; ADDRESS_REG_B                      ; CLOCK1                       ; Untyped                          ;
+; OUTDATA_REG_B                      ; UNREGISTERED                 ; Untyped                          ;
+; BYTEENA_REG_B                      ; CLOCK1                       ; Untyped                          ;
+; INDATA_ACLR_B                      ; NONE                         ; Untyped                          ;
+; WRCONTROL_ACLR_B                   ; NONE                         ; Untyped                          ;
+; ADDRESS_ACLR_B                     ; NONE                         ; Untyped                          ;
+; OUTDATA_ACLR_B                     ; NONE                         ; Untyped                          ;
+; RDCONTROL_ACLR_B                   ; NONE                         ; Untyped                          ;
+; BYTEENA_ACLR_B                     ; NONE                         ; Untyped                          ;
+; WIDTH_BYTEENA_A                    ; 1                            ; Signed Integer                   ;
+; WIDTH_BYTEENA_B                    ; 1                            ; Untyped                          ;
+; RAM_BLOCK_TYPE                     ; AUTO                         ; Untyped                          ;
+; BYTE_SIZE                          ; 8                            ; Untyped                          ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                    ; Untyped                          ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ         ; Untyped                          ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ         ; Untyped                          ;
+; INIT_FILE                          ; computational_test_Lab34.hex ; Untyped                          ;
+; INIT_FILE_LAYOUT                   ; PORT_A                       ; Untyped                          ;
+; MAXIMUM_DEPTH                      ; 0                            ; Untyped                          ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                       ; Untyped                          ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                       ; Untyped                          ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                       ; Untyped                          ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                       ; Untyped                          ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN              ; Untyped                          ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN              ; Untyped                          ;
+; ENABLE_ECC                         ; FALSE                        ; Untyped                          ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                        ; Untyped                          ;
+; WIDTH_ECCSTATUS                    ; 3                            ; Untyped                          ;
+; DEVICE_FAMILY                      ; Cyclone IV E                 ; Untyped                          ;
+; CBXI_PARAMETER                     ; altsyncram_inb1              ; Untyped                          ;
++------------------------------------+------------------------------+----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: data_memory:data_mem|altsyncram:altsyncram_component ;
++------------------------------------+------------------------+-------------------------------------+
+; Parameter Name                     ; Value                  ; Type                                ;
++------------------------------------+------------------------+-------------------------------------+
+; BYTE_SIZE_BLOCK                    ; 8                      ; Untyped                             ;
+; AUTO_CARRY_CHAINS                  ; ON                     ; AUTO_CARRY                          ;
+; IGNORE_CARRY_BUFFERS               ; OFF                    ; IGNORE_CARRY                        ;
+; AUTO_CASCADE_CHAINS                ; ON                     ; AUTO_CASCADE                        ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                    ; IGNORE_CASCADE                      ;
+; WIDTH_BYTEENA                      ; 1                      ; Untyped                             ;
+; OPERATION_MODE                     ; SINGLE_PORT            ; Untyped                             ;
+; WIDTH_A                            ; 4                      ; Signed Integer                      ;
+; WIDTHAD_A                          ; 4                      ; Signed Integer                      ;
+; NUMWORDS_A                         ; 16                     ; Signed Integer                      ;
+; OUTDATA_REG_A                      ; UNREGISTERED           ; Untyped                             ;
+; ADDRESS_ACLR_A                     ; NONE                   ; Untyped                             ;
+; OUTDATA_ACLR_A                     ; NONE                   ; Untyped                             ;
+; WRCONTROL_ACLR_A                   ; NONE                   ; Untyped                             ;
+; INDATA_ACLR_A                      ; NONE                   ; Untyped                             ;
+; BYTEENA_ACLR_A                     ; NONE                   ; Untyped                             ;
+; WIDTH_B                            ; 1                      ; Untyped                             ;
+; WIDTHAD_B                          ; 1                      ; Untyped                             ;
+; NUMWORDS_B                         ; 1                      ; Untyped                             ;
+; INDATA_REG_B                       ; CLOCK1                 ; Untyped                             ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                 ; Untyped                             ;
+; RDCONTROL_REG_B                    ; CLOCK1                 ; Untyped                             ;
+; ADDRESS_REG_B                      ; CLOCK1                 ; Untyped                             ;
+; OUTDATA_REG_B                      ; UNREGISTERED           ; Untyped                             ;
+; BYTEENA_REG_B                      ; CLOCK1                 ; Untyped                             ;
+; INDATA_ACLR_B                      ; NONE                   ; Untyped                             ;
+; WRCONTROL_ACLR_B                   ; NONE                   ; Untyped                             ;
+; ADDRESS_ACLR_B                     ; NONE                   ; Untyped                             ;
+; OUTDATA_ACLR_B                     ; NONE                   ; Untyped                             ;
+; RDCONTROL_ACLR_B                   ; NONE                   ; Untyped                             ;
+; BYTEENA_ACLR_B                     ; NONE                   ; Untyped                             ;
+; WIDTH_BYTEENA_A                    ; 1                      ; Signed Integer                      ;
+; WIDTH_BYTEENA_B                    ; 1                      ; Untyped                             ;
+; RAM_BLOCK_TYPE                     ; AUTO                   ; Untyped                             ;
+; BYTE_SIZE                          ; 8                      ; Untyped                             ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE              ; Untyped                             ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_WITH_NBE_READ ; Untyped                             ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ   ; Untyped                             ;
+; INIT_FILE                          ; UNUSED                 ; Untyped                             ;
+; INIT_FILE_LAYOUT                   ; PORT_A                 ; Untyped                             ;
+; MAXIMUM_DEPTH                      ; 0                      ; Untyped                             ;
+; CLOCK_ENABLE_INPUT_A               ; BYPASS                 ; Untyped                             ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                 ; Untyped                             ;
+; CLOCK_ENABLE_OUTPUT_A              ; BYPASS                 ; Untyped                             ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                 ; Untyped                             ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN        ; Untyped                             ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN        ; Untyped                             ;
+; ENABLE_ECC                         ; FALSE                  ; Untyped                             ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                  ; Untyped                             ;
+; WIDTH_ECCSTATUS                    ; 3                      ; Untyped                             ;
+; DEVICE_FAMILY                      ; Cyclone IV E           ; Untyped                             ;
+; CBXI_PARAMETER                     ; altsyncram_8ag1        ; Untyped                             ;
++------------------------------------+------------------------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                                                      ;
++-------------------------------------------+---------------------------------------------------------------------------+
+; Name                                      ; Value                                                                     ;
++-------------------------------------------+---------------------------------------------------------------------------+
+; Number of entity instances                ; 3                                                                         ;
+; Entity Instance                           ; cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component ;
+;     -- OPERATION_MODE                     ; DUAL_PORT                                                                 ;
+;     -- WIDTH_A                            ; 256                                                                       ;
+;     -- NUMWORDS_A                         ; 2                                                                         ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                              ;
+;     -- WIDTH_B                            ; 256                                                                       ;
+;     -- NUMWORDS_B                         ; 2                                                                         ;
+;     -- ADDRESS_REG_B                      ; CLOCK0                                                                    ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                              ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                      ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                 ;
+; Entity Instance                           ; program_memory:prog_mem|altsyncram:altsyncram_component                   ;
+;     -- OPERATION_MODE                     ; ROM                                                                       ;
+;     -- WIDTH_A                            ; 8                                                                         ;
+;     -- NUMWORDS_A                         ; 256                                                                       ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                              ;
+;     -- WIDTH_B                            ; 1                                                                         ;
+;     -- NUMWORDS_B                         ; 1                                                                         ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                    ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                              ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                      ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                 ;
+; Entity Instance                           ; data_memory:data_mem|altsyncram:altsyncram_component                      ;
+;     -- OPERATION_MODE                     ; SINGLE_PORT                                                               ;
+;     -- WIDTH_A                            ; 4                                                                         ;
+;     -- NUMWORDS_A                         ; 16                                                                        ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                                                              ;
+;     -- WIDTH_B                            ; 1                                                                         ;
+;     -- NUMWORDS_B                         ; 1                                                                         ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                                                                    ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                                                              ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                                                      ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                                                                 ;
++-------------------------------------------+---------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "computational_unit:comp_unit"                                                                               ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                  ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; alu_out ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "program_sequencer:prog_sequencer"                                                                                                                                           ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                                                                                                               ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; hold_count ; Output ; Warning  ; Output or bidir port (5 bits) is smaller than the port expression (8 bits) it drives.  The 3 most-significant bit(s) in the port expression will be connected to GND. ;
++------------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Port Connectivity Checks: "cache:single_line_cache|dual_port_ram:DPR" ;
++-----------+-------+----------+----------------------------------------+
+; Port      ; Type  ; Severity ; Details                                ;
++-----------+-------+----------+----------------------------------------+
+; rdaddress ; Input ; Info     ; Stuck at GND                           ;
+; wraddress ; Input ; Info     ; Stuck at GND                           ;
++-----------+-------+----------+----------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 120                         ;
+; cycloneiii_ff         ; 1                           ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 2                           ;
+;     normal            ; 2                           ;
+;         0 data inputs ; 2                           ;
+; cycloneiii_ram_block  ; 8                           ;
+;                       ;                             ;
+; Max LUT depth         ; 0.00                        ;
+; Average LUT depth     ; 0.00                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+    Info: Processing started: Mon Nov 18 16:10:06 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off single_cache -c micro
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file dual_port_ram.v
+    Info (12023): Found entity 1: dual_port_ram File: /home/tck290/engr-ece/CME433/lab4/single_cache/dual_port_ram.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file data_memory.v
+    Info (12023): Found entity 1: data_memory File: /home/tck290/engr-ece/CME433/lab4/single_cache/data_memory.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file program_memory.v
+    Info (12023): Found entity 1: program_memory File: /home/tck290/engr-ece/CME433/lab4/single_cache/program_memory.v Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file micro.v
+    Info (12023): Found entity 1: micro File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file computational_unit.v
+    Info (12023): Found entity 1: computational_unit File: /home/tck290/engr-ece/CME433/lab4/single_cache/computational_unit.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file cache.v
+    Info (12023): Found entity 1: cache File: /home/tck290/engr-ece/CME433/lab4/single_cache/cache.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file instruction_decoder.v
+    Info (12023): Found entity 1: instruction_decoder File: /home/tck290/engr-ece/CME433/lab4/single_cache/instruction_decoder.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file program_sequencer.v
+    Info (12023): Found entity 1: program_sequencer File: /home/tck290/engr-ece/CME433/lab4/single_cache/program_sequencer.v Line: 1
+Info (12127): Elaborating entity "micro" for the top level hierarchy
+Info (12128): Elaborating entity "cache" for hierarchy "cache:single_line_cache" File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 49
+Info (12128): Elaborating entity "dual_port_ram" for hierarchy "cache:single_line_cache|dual_port_ram:DPR" File: /home/tck290/engr-ece/CME433/lab4/single_cache/cache.v Line: 64
+Info (12128): Elaborating entity "altsyncram" for hierarchy "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component" File: /home/tck290/engr-ece/CME433/lab4/single_cache/dual_port_ram.v Line: 91
+Info (12130): Elaborated megafunction instantiation "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component" File: /home/tck290/engr-ece/CME433/lab4/single_cache/dual_port_ram.v Line: 91
+Info (12133): Instantiated megafunction "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component" with the following parameter: File: /home/tck290/engr-ece/CME433/lab4/single_cache/dual_port_ram.v Line: 91
+    Info (12134): Parameter "address_aclr_b" = "NONE"
+    Info (12134): Parameter "address_reg_b" = "CLOCK0"
+    Info (12134): Parameter "byte_size" = "8"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_input_b" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_b" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "2"
+    Info (12134): Parameter "numwords_b" = "2"
+    Info (12134): Parameter "operation_mode" = "DUAL_PORT"
+    Info (12134): Parameter "outdata_aclr_b" = "NONE"
+    Info (12134): Parameter "outdata_reg_b" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_mixed_ports" = "DONT_CARE"
+    Info (12134): Parameter "widthad_a" = "1"
+    Info (12134): Parameter "widthad_b" = "1"
+    Info (12134): Parameter "width_a" = "256"
+    Info (12134): Parameter "width_b" = "256"
+    Info (12134): Parameter "width_byteena_a" = "32"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_o8q1.tdf
+    Info (12023): Found entity 1: altsyncram_o8q1 File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_o8q1" for hierarchy "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated" File: /opt/intelFPGA/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "program_memory" for hierarchy "program_memory:prog_mem" File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 61
+Info (12128): Elaborating entity "altsyncram" for hierarchy "program_memory:prog_mem|altsyncram:altsyncram_component" File: /home/tck290/engr-ece/CME433/lab4/single_cache/program_memory.v Line: 81
+Info (12130): Elaborated megafunction instantiation "program_memory:prog_mem|altsyncram:altsyncram_component" File: /home/tck290/engr-ece/CME433/lab4/single_cache/program_memory.v Line: 81
+Info (12133): Instantiated megafunction "program_memory:prog_mem|altsyncram:altsyncram_component" with the following parameter: File: /home/tck290/engr-ece/CME433/lab4/single_cache/program_memory.v Line: 81
+    Info (12134): Parameter "address_aclr_a" = "NONE"
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "init_file" = "computational_test_Lab34.hex"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "256"
+    Info (12134): Parameter "operation_mode" = "ROM"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "widthad_a" = "8"
+    Info (12134): Parameter "width_a" = "8"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_inb1.tdf
+    Info (12023): Found entity 1: altsyncram_inb1 File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_inb1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_inb1" for hierarchy "program_memory:prog_mem|altsyncram:altsyncram_component|altsyncram_inb1:auto_generated" File: /opt/intelFPGA/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Info (12128): Elaborating entity "program_sequencer" for hierarchy "program_sequencer:prog_sequencer" File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 87
+Warning (10230): Verilog HDL assignment warning at program_sequencer.v(32): truncated value with size 8 to match size of target (5) File: /home/tck290/engr-ece/CME433/lab4/single_cache/program_sequencer.v Line: 32
+Warning (10230): Verilog HDL assignment warning at program_sequencer.v(36): truncated value with size 8 to match size of target (5) File: /home/tck290/engr-ece/CME433/lab4/single_cache/program_sequencer.v Line: 36
+Warning (10240): Verilog HDL Always Construct warning at program_sequencer.v(74): inferring latch(es) for variable "reset_1shot", which holds its previous value in one or more paths through the always construct File: /home/tck290/engr-ece/CME433/lab4/single_cache/program_sequencer.v Line: 74
+Info (10041): Inferred latch for "reset_1shot" at program_sequencer.v(74) File: /home/tck290/engr-ece/CME433/lab4/single_cache/program_sequencer.v Line: 74
+Info (12128): Elaborating entity "instruction_decoder" for hierarchy "instruction_decoder:intr_decoder" File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 109
+Info (12128): Elaborating entity "computational_unit" for hierarchy "computational_unit:comp_unit" File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 138
+Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:data_mem" File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 147
+Info (12128): Elaborating entity "altsyncram" for hierarchy "data_memory:data_mem|altsyncram:altsyncram_component" File: /home/tck290/engr-ece/CME433/lab4/single_cache/data_memory.v Line: 85
+Info (12130): Elaborated megafunction instantiation "data_memory:data_mem|altsyncram:altsyncram_component" File: /home/tck290/engr-ece/CME433/lab4/single_cache/data_memory.v Line: 85
+Info (12133): Instantiated megafunction "data_memory:data_mem|altsyncram:altsyncram_component" with the following parameter: File: /home/tck290/engr-ece/CME433/lab4/single_cache/data_memory.v Line: 85
+    Info (12134): Parameter "clock_enable_input_a" = "BYPASS"
+    Info (12134): Parameter "clock_enable_output_a" = "BYPASS"
+    Info (12134): Parameter "intended_device_family" = "Cyclone IV E"
+    Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
+    Info (12134): Parameter "lpm_type" = "altsyncram"
+    Info (12134): Parameter "numwords_a" = "16"
+    Info (12134): Parameter "operation_mode" = "SINGLE_PORT"
+    Info (12134): Parameter "outdata_aclr_a" = "NONE"
+    Info (12134): Parameter "outdata_reg_a" = "UNREGISTERED"
+    Info (12134): Parameter "power_up_uninitialized" = "FALSE"
+    Info (12134): Parameter "read_during_write_mode_port_a" = "NEW_DATA_WITH_NBE_READ"
+    Info (12134): Parameter "widthad_a" = "4"
+    Info (12134): Parameter "width_a" = "4"
+    Info (12134): Parameter "width_byteena_a" = "1"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_8ag1.tdf
+    Info (12023): Found entity 1: altsyncram_8ag1 File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_8ag1.tdf Line: 27
+Info (12128): Elaborating entity "altsyncram_8ag1" for hierarchy "data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_8ag1:auto_generated" File: /opt/intelFPGA/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[8]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 286
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[9]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 317
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[10]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 348
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[11]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 379
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[12]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 410
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[13]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 441
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[14]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 472
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[15]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 503
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[16]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 534
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[17]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 565
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[18]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 596
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[19]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 627
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[20]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 658
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[21]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 689
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[22]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 720
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[23]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 751
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[24]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 782
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[25]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 813
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[26]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 844
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[27]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 875
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[28]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 906
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[29]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 937
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[30]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 968
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[31]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 999
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[32]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1030
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[33]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1061
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[34]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1092
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[35]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1123
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[36]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1154
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[37]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1185
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[38]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1216
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[39]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1247
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[40]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1278
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[41]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1309
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[42]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1340
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[43]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1371
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[44]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1402
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[45]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1433
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[46]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1464
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[47]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1495
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[48]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1526
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[49]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1557
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[50]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1588
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[51]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1619
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[52]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1650
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[53]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1681
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[54]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1712
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[55]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1743
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[56]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1774
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[57]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1805
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[58]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1836
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[59]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1867
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[60]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1898
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[61]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1929
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[62]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1960
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[63]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 1991
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[64]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2022
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[65]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2053
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[66]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2084
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[67]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2115
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[68]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2146
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[69]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2177
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[70]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2208
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[71]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2239
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[72]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2270
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[73]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2301
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[74]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2332
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[75]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2363
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[76]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2394
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[77]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2425
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[78]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2456
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[79]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2487
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[80]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2518
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[81]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2549
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[82]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2580
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[83]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2611
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[84]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2642
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[85]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2673
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[86]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2704
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[87]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2735
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[88]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2766
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[89]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2797
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[90]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2828
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[91]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2859
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[92]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2890
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[93]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2921
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[94]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2952
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[95]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 2983
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[96]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3014
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[97]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3045
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[98]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3076
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[99]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3107
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[100]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3138
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[101]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3169
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[102]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3200
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[103]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3231
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[104]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3262
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[105]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3293
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[106]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3324
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[107]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3355
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[108]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3386
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[109]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3417
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[110]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3448
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[111]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3479
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[112]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3510
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[113]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3541
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[114]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3572
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[115]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3603
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[116]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3634
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[117]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3665
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[118]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3696
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[119]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3727
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[120]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3758
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[121]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3789
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[122]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3820
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[123]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3851
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[124]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3882
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[125]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3913
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[126]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3944
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[127]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 3975
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[128]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4006
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[129]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4037
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[130]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4068
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[131]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4099
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[132]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4130
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[133]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4161
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[134]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4192
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[135]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4223
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[136]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4254
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[137]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4285
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[138]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4316
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[139]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4347
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[140]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4378
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[141]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4409
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[142]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4440
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[143]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4471
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[144]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4502
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[145]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4533
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[146]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4564
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[147]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4595
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[148]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4626
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[149]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4657
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[150]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4688
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[151]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4719
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[152]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4750
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[153]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4781
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[154]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4812
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[155]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4843
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[156]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4874
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[157]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4905
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[158]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4936
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[159]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4967
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[160]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 4998
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[161]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5029
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[162]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5060
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[163]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5091
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[164]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5122
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[165]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5153
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[166]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5184
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[167]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5215
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[168]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5246
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[169]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5277
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[170]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5308
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[171]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5339
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[172]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5370
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[173]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5401
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[174]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5432
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[175]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5463
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[176]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5494
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[177]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5525
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[178]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5556
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[179]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5587
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[180]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5618
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[181]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5649
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[182]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5680
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[183]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5711
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[184]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5742
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[185]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5773
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[186]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5804
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[187]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5835
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[188]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5866
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[189]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5897
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[190]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5928
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[191]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5959
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[192]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 5990
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[193]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6021
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[194]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6052
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[195]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6083
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[196]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6114
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[197]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6145
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[198]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6176
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[199]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6207
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[200]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6238
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[201]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6269
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[202]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6300
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[203]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6331
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[204]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6362
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[205]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6393
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[206]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6424
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[207]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6455
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[208]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6486
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[209]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6517
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[210]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6548
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[211]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6579
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[212]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6610
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[213]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6641
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[214]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6672
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[215]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6703
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[216]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6734
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[217]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6765
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[218]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6796
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[219]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6827
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[220]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6858
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[221]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6889
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[222]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6920
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[223]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6951
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[224]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 6982
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[225]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7013
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[226]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7044
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[227]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7075
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[228]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7106
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[229]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7137
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[230]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7168
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[231]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7199
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[232]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7230
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[233]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7261
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[234]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7292
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[235]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7323
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[236]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7354
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[237]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7385
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[238]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7416
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[239]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7447
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[240]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7478
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[241]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7509
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[242]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7540
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[243]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7571
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[244]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7602
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[245]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7633
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[246]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7664
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[247]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7695
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[248]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7726
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[249]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7757
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[250]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7788
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[251]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7819
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[252]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7850
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[253]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7881
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[254]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7912
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[255]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 7943
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_8ag1:auto_generated|q_a[0]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_8ag1.tdf Line: 36
+        Warning (14320): Synthesized away node "data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_8ag1:auto_generated|q_a[1]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_8ag1.tdf Line: 58
+        Warning (14320): Synthesized away node "data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_8ag1:auto_generated|q_a[2]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_8ag1.tdf Line: 80
+        Warning (14320): Synthesized away node "data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_8ag1:auto_generated|q_a[3]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_8ag1.tdf Line: 102
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[0]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 38
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[1]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 69
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[2]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 100
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[3]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 131
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[4]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 162
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[5]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 193
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[6]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 224
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[7]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 255
+Warning (14284): Synthesized away the following node(s):
+    Warning (14285): Synthesized away the following RAM node(s):
+        Warning (14320): Synthesized away node "data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_8ag1:auto_generated|q_a[0]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_8ag1.tdf Line: 36
+        Warning (14320): Synthesized away node "data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_8ag1:auto_generated|q_a[1]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_8ag1.tdf Line: 58
+        Warning (14320): Synthesized away node "data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_8ag1:auto_generated|q_a[2]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_8ag1.tdf Line: 80
+        Warning (14320): Synthesized away node "data_memory:data_mem|altsyncram:altsyncram_component|altsyncram_8ag1:auto_generated|q_a[3]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_8ag1.tdf Line: 102
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[0]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 38
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[1]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 69
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[2]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 100
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[3]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 131
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[4]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 162
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[5]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 193
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[6]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 224
+        Warning (14320): Synthesized away node "cache:single_line_cache|dual_port_ram:DPR|altsyncram:altsyncram_component|altsyncram_o8q1:auto_generated|q_b[7]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_o8q1.tdf Line: 255
+Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "o_reg[0]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 4
+    Warning (13410): Pin "o_reg[1]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 4
+    Warning (13410): Pin "o_reg[2]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 4
+    Warning (13410): Pin "o_reg[3]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 4
+    Warning (13410): Pin "pc[0]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "pc[1]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "pc[2]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "pc[3]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "pc[4]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "pc[5]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "pc[6]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "pc[7]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "from_PS[0]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "from_PS[1]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "from_PS[2]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "from_PS[3]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "from_PS[4]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "from_PS[5]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "from_PS[6]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "from_PS[7]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "pm_address[0]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "pm_address[1]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "pm_address[2]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "pm_address[3]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "pm_address[4]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "pm_address[5]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "pm_address[6]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "pm_address[7]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 6
+    Warning (13410): Pin "ir[0]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 7
+    Warning (13410): Pin "ir[1]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 7
+    Warning (13410): Pin "ir[2]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 7
+    Warning (13410): Pin "ir[3]" is stuck at VCC File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 7
+    Warning (13410): Pin "ir[4]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 7
+    Warning (13410): Pin "ir[5]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 7
+    Warning (13410): Pin "ir[6]" is stuck at VCC File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 7
+    Warning (13410): Pin "ir[7]" is stuck at VCC File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 7
+    Warning (13410): Pin "from_ID[4]" is stuck at VCC File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 7
+    Warning (13410): Pin "NOPC8" is stuck at VCC File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 8
+    Warning (13410): Pin "NOPCF" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 8
+    Warning (13410): Pin "NOPD8" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 8
+    Warning (13410): Pin "NOPDF" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 8
+    Warning (13410): Pin "register_enables[4]" is stuck at VCC File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 9
+    Warning (13410): Pin "from_CU[0]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 10
+    Warning (13410): Pin "from_CU[1]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 10
+    Warning (13410): Pin "from_CU[2]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 10
+    Warning (13410): Pin "from_CU[3]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 10
+    Warning (13410): Pin "from_CU[4]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 10
+    Warning (13410): Pin "from_CU[5]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 10
+    Warning (13410): Pin "from_CU[6]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 10
+    Warning (13410): Pin "from_CU[7]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 10
+    Warning (13410): Pin "x0[0]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "x0[1]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "x0[2]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "x0[3]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "x1[0]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "x1[1]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "x1[2]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "x1[3]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "y0[0]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "y0[1]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "y0[2]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "y0[3]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "y1[0]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "y1[1]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "y1[2]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "y1[3]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "r[0]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "r[1]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "r[2]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "r[3]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "m[0]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "m[1]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "m[2]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "m[3]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "i[0]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "i[1]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "i[2]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "i[3]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 11
+    Warning (13410): Pin "zero_flag" is stuck at VCC File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 12
+    Warning (13410): Pin "hold_out" is stuck at VCC File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 13
+    Warning (13410): Pin "hold" is stuck at VCC File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 13
+    Warning (13410): Pin "start_hold" is stuck at VCC File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 13
+    Warning (13410): Pin "end_hold" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 13
+    Warning (13410): Pin "hold_count[0]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 15
+    Warning (13410): Pin "hold_count[1]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 15
+    Warning (13410): Pin "hold_count[2]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 15
+    Warning (13410): Pin "hold_count[3]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 15
+    Warning (13410): Pin "hold_count[4]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 15
+    Warning (13410): Pin "hold_count[5]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 15
+    Warning (13410): Pin "hold_count[6]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 15
+    Warning (13410): Pin "hold_count[7]" is stuck at GND File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 15
+Info (286030): Timing-Driven Synthesis is running
+Info (17036): Removed 7 MSB VCC or GND address nodes from RAM block "program_memory:prog_mem|altsyncram:altsyncram_component|altsyncram_inb1:auto_generated|ALTSYNCRAM" File: /home/tck290/engr-ece/CME433/lab4/single_cache/db/altsyncram_inb1.tdf Line: 31
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 4 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "i_pins[0]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 3
+    Warning (15610): No output dependent on input pin "i_pins[1]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 3
+    Warning (15610): No output dependent on input pin "i_pins[2]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 3
+    Warning (15610): No output dependent on input pin "i_pins[3]" File: /home/tck290/engr-ece/CME433/lab4/single_cache/micro.v Line: 3
+Info (21057): Implemented 130 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 114 output pins
+    Info (21061): Implemented 2 logic cells
+    Info (21064): Implemented 8 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 380 warnings
+    Info: Peak virtual memory: 1105 megabytes
+    Info: Processing ended: Mon Nov 18 16:10:21 2019
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:33
+
+

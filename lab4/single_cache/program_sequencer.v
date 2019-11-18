@@ -7,7 +7,7 @@ module program_sequencer(
 	output reg [7:0] pc,							// made output for final exam (instead of internal)
 	output reg [7:0] from_PS,					// made specifically for final exam scrambler
 	output reg hold_out, start_hold, end_hold, hold,	// CME 433 Lab 3
-	output reg [4:0] hold_count								// CME 433 Lab 3
+	output reg [4:0] hold_count,								// CME 433 Lab 3
 	output reg [4:0] cache_wroffset, cache_rdoffset,	// CME 433 Lab 4
 	output reg cache_wren										// CME 433 Lab 4
 	);
@@ -78,7 +78,7 @@ always @ *
 cache_wroffset = hold_count;
 
 always @ *
-cache_rdoffset = pm_address[4:0];
+cache_rdoffset = pm_addr[4:0];
 
 always @ *
 cache_wren = hold;
