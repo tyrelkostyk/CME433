@@ -49,3 +49,349 @@ run -all
 # ** Note: $stop    : /home/tck290/engr-ece/CME433/lab5/multi_cache/simulation/modelsim/microprocessor_tb.v(33)
 #    Time: 375 us  Iteration: 0  Instance: /microprocessor_tb
 # Break in Module microprocessor_tb at /home/tck290/engr-ece/CME433/lab5/multi_cache/simulation/modelsim/microprocessor_tb.v line 33
+quit -sim
+# End time: 15:04:49 on Nov 29,2019, Elapsed time: 1:45:38
+# Errors: 0, Warnings: 18
+# reading /opt/intelFPGA/18.1/modelsim_ase/linuxaloem/../modelsim.ini
+# Loading project set_assoc_cache_testbench
+# Compile of micro.vo was successful.
+# Compile of microprocessor_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -L cycloneive_ver -L altera_mf_ver -L altera_ver work.microprocessor_tb
+# vsim -L cycloneive_ver -L altera_mf_ver -L altera_ver work.microprocessor_tb 
+# Start time: 15:05:53 on Nov 29,2019
+# Loading work.microprocessor_tb
+# Loading work.micro
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# SDF 10.5b Compiler 2016.10 Oct  5 2016
+# Loading instances from micro_v.sdo
+# ** Warning: (vsim-3017) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Too few port connections. Expected 29, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /microprocessor_tb/uut File: /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/micro.vo
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'pm_data'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_PS'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_ID'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPC8'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPCF'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPD8'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPDF'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'register_enables'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_CU'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'r'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'm'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'i'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'zero_flag'.
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from micro_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /microprocessor_tb File: /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v
+do wave.do
+run -all
+# ** Note: $stop    : /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(33)
+#    Time: 375 us  Iteration: 0  Instance: /microprocessor_tb
+# Break in Module microprocessor_tb at /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v line 33
+# Compile of micro.vo was successful.
+# Compile of microprocessor_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -L cycloneive_ver -L altera_mf_ver -L altera_ver work.microprocessor_tb
+# End time: 15:10:32 on Nov 29,2019, Elapsed time: 0:04:39
+# Errors: 0, Warnings: 18
+# vsim -L cycloneive_ver -L altera_mf_ver -L altera_ver work.microprocessor_tb 
+# Start time: 15:10:32 on Nov 29,2019
+# Loading work.microprocessor_tb
+# Loading work.micro
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# SDF 10.5b Compiler 2016.10 Oct  5 2016
+# Loading instances from micro_v.sdo
+# ** Warning: (vsim-3017) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Too few port connections. Expected 29, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /microprocessor_tb/uut File: /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/micro.vo
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'pm_data'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_PS'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_ID'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPC8'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPCF'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPD8'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPDF'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'register_enables'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_CU'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'r'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'm'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'i'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'zero_flag'.
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from micro_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /microprocessor_tb File: /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v
+do wave.do
+run -all
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2704 ps, d[0]:2762 ps, 222 ps );
+#    Time: 2762 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_0|altsyncram_component|auto_generated|ram_block1a32 /addr_b_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2717 ps, d[0]:2766 ps, 222 ps );
+#    Time: 2766 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_1|altsyncram_component|auto_generated|ram_block1a32 /addr_b_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2710 ps, d[0]:2784 ps, 222 ps );
+#    Time: 2784 ps  Iteration: 1  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_0|altsyncram_component|auto_generated|ram_block1a0 /addr_b_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2715 ps, d[0]:2787 ps, 222 ps );
+#    Time: 2787 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_1|altsyncram_component|auto_generated|ram_block1a0 /addr_b_register
+# ** Note: $stop    : /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(33)
+#    Time: 375 us  Iteration: 0  Instance: /microprocessor_tb
+# Break in Module microprocessor_tb at /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v line 33
+# Compile of micro.vo was successful.
+# Compile of microprocessor_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -L cycloneive_ver -L altera_mf_ver -L altera_ver work.microprocessor_tb
+# End time: 15:17:36 on Nov 29,2019, Elapsed time: 0:07:04
+# Errors: 4, Warnings: 18
+# vsim -L cycloneive_ver -L altera_mf_ver -L altera_ver work.microprocessor_tb 
+# Start time: 15:17:36 on Nov 29,2019
+# Loading work.microprocessor_tb
+# Loading work.micro
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# SDF 10.5b Compiler 2016.10 Oct  5 2016
+# Loading instances from micro_v.sdo
+# ** Warning: (vsim-3017) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Too few port connections. Expected 29, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /microprocessor_tb/uut File: /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/micro.vo
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'pm_data'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_PS'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_ID'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPC8'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPCF'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPD8'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPDF'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'register_enables'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_CU'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'r'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'm'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'i'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'zero_flag'.
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from micro_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /microprocessor_tb File: /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v
+do wave.do; run -all
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2704 ps, d[0]:2762 ps, 222 ps );
+#    Time: 2762 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_0|altsyncram_component|auto_generated|ram_block1a32 /addr_b_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2717 ps, d[0]:2766 ps, 222 ps );
+#    Time: 2766 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_1|altsyncram_component|auto_generated|ram_block1a32 /addr_b_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2710 ps, d[0]:2784 ps, 222 ps );
+#    Time: 2784 ps  Iteration: 1  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_0|altsyncram_component|auto_generated|ram_block1a0 /addr_b_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2715 ps, d[0]:2787 ps, 222 ps );
+#    Time: 2787 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_1|altsyncram_component|auto_generated|ram_block1a0 /addr_b_register
+# ** Note: $stop    : /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(33)
+#    Time: 375 us  Iteration: 0  Instance: /microprocessor_tb
+# Break in Module microprocessor_tb at /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v line 33
+# Compile of micro.vo was successful.
+# Compile of microprocessor_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -L cycloneive_ver -L altera_mf_ver -L altera_ver work.microprocessor_tb
+# End time: 15:24:29 on Nov 29,2019, Elapsed time: 0:06:53
+# Errors: 4, Warnings: 18
+# vsim -L cycloneive_ver -L altera_mf_ver -L altera_ver work.microprocessor_tb 
+# Start time: 15:24:29 on Nov 29,2019
+# Loading work.microprocessor_tb
+# Loading work.micro
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# SDF 10.5b Compiler 2016.10 Oct  5 2016
+# Loading instances from micro_v.sdo
+# ** Warning: (vsim-3017) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Too few port connections. Expected 29, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /microprocessor_tb/uut File: /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/micro.vo
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'pm_data'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_PS'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_ID'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPC8'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPCF'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPD8'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPDF'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'register_enables'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_CU'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'r'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'm'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'i'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'zero_flag'.
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from micro_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /microprocessor_tb File: /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v
+do wave.do; run -all
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2651 ps, d:2668 ps, 222 ps );
+#    Time: 2668 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_1|altsyncram_component|auto_generated|ram_block1a0 /byteena_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2642 ps, d:2715 ps, 222 ps );
+#    Time: 2715 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_0|altsyncram_component|auto_generated|ram_block1a0 /byteena_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2638 ps, d[0]:2771 ps, 222 ps );
+#    Time: 2771 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_0|altsyncram_component|auto_generated|ram_block1a0 /we_a_register
+# ** Note: $stop    : /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(33)
+#    Time: 375 us  Iteration: 0  Instance: /microprocessor_tb
+# Break in Module microprocessor_tb at /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v line 33
+# Compile of micro.vo was successful.
+# Compile of microprocessor_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -L cycloneive_ver -L altera_mf_ver -L altera_ver work.microprocessor_tb
+# End time: 15:24:58 on Nov 29,2019, Elapsed time: 0:00:29
+# Errors: 3, Warnings: 18
+# vsim -L cycloneive_ver -L altera_mf_ver -L altera_ver work.microprocessor_tb 
+# Start time: 15:24:58 on Nov 29,2019
+# Loading work.microprocessor_tb
+# Loading work.micro
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# Loading instances from micro_v.sdo
+# ** Warning: (vsim-3017) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Too few port connections. Expected 29, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /microprocessor_tb/uut File: /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/micro.vo
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'pm_data'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_PS'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_ID'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPC8'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPCF'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPD8'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPDF'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'register_enables'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_CU'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'r'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'm'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'i'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'zero_flag'.
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from micro_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /microprocessor_tb File: /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v
+do wave.do; run -all
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2651 ps, d:2668 ps, 222 ps );
+#    Time: 2668 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_1|altsyncram_component|auto_generated|ram_block1a0 /byteena_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2642 ps, d:2715 ps, 222 ps );
+#    Time: 2715 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_0|altsyncram_component|auto_generated|ram_block1a0 /byteena_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2638 ps, d[0]:2771 ps, 222 ps );
+#    Time: 2771 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_0|altsyncram_component|auto_generated|ram_block1a0 /we_a_register
+# ** Note: $stop    : /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(33)
+#    Time: 375 us  Iteration: 0  Instance: /microprocessor_tb
+# Break in Module microprocessor_tb at /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v line 33
+# Compile of micro.vo was successful.
+# Compile of microprocessor_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -L cycloneive_ver -L altera_mf_ver -L altera_ver work.microprocessor_tb
+# End time: 15:28:53 on Nov 29,2019, Elapsed time: 0:03:55
+# Errors: 3, Warnings: 18
+# vsim -L cycloneive_ver -L altera_mf_ver -L altera_ver work.microprocessor_tb 
+# Start time: 15:28:53 on Nov 29,2019
+# Loading work.microprocessor_tb
+# Loading work.micro
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# SDF 10.5b Compiler 2016.10 Oct  5 2016
+# Loading instances from micro_v.sdo
+# ** Warning: (vsim-3017) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Too few port connections. Expected 29, found 12.
+#    Time: 0 ps  Iteration: 0  Instance: /microprocessor_tb/uut File: /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/micro.vo
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'pm_data'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_PS'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_ID'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPC8'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPCF'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPD8'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'NOPDF'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'register_enables'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'from_CU'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'x0'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'x1'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'y0'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'y1'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'r'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'm'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'i'.
+# ** Warning: (vsim-3722) /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(17): [TFMPC] - Missing connection for port 'zero_flag'.
+# Loading altera_ver.PRIM_GDFF_LOW
+# Loading timing data from micro_v.sdo
+# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
+#    Time: 0 ps  Iteration: 0  Instance: /microprocessor_tb File: /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v
+do wave.do; run -all
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2708 ps, d:2724 ps, 222 ps );
+#    Time: 2724 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_1|altsyncram_component|auto_generated|ram_block1a0 /byteena_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2710 ps, d[0]:2761 ps, 222 ps );
+#    Time: 2761 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_1|altsyncram_component|auto_generated|ram_block1a32 /we_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2704 ps, d[0]:2813 ps, 222 ps );
+#    Time: 2813 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_1|altsyncram_component|auto_generated|ram_block1a0 /we_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2714 ps, d:2826 ps, 222 ps );
+#    Time: 2826 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_1|altsyncram_component|auto_generated|ram_block1a32 /byteena_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2710 ps, d:2835 ps, 222 ps );
+#    Time: 2835 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_0|altsyncram_component|auto_generated|ram_block1a0 /byteena_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2708 ps, d:2865 ps, 222 ps );
+#    Time: 2865 ps  Iteration: 1  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_1|altsyncram_component|auto_generated|ram_block1a0 /byteena_a_register
+# ** Error: /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/cycloneive_atoms.v(4542): $hold( posedge clk &&& reset:2710 ps, d:2876 ps, 222 ps );
+#    Time: 2876 ps  Iteration: 0  Instance: /microprocessor_tb/uut/\multi_line_cache_set_assoc|cache_ram_inst_0|altsyncram_component|auto_generated|ram_block1a0 /byteena_a_register
+# ** Note: $stop    : /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v(33)
+#    Time: 375 us  Iteration: 0  Instance: /microprocessor_tb
+# Break in Module microprocessor_tb at /home/tck290/engr-ece/CME433/lab5/set_assoc_cache/simulation/modelsim/microprocessor_tb.v line 33

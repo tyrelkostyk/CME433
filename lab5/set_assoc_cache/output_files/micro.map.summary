@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Fri Nov 29 15:27:38 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : micro
+Top-level Entity Name : micro
+Family : Cyclone IV E
+Total logic elements : 387
+    Total combinational functions : 349
+    Dedicated logic registers : 77
+Total registers : 77
+Total pins : 115
+Total virtual pins : 0
+Total memory bits : 2,368
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

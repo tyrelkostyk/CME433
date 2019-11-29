@@ -10,7 +10,7 @@ module program_sequencer(
 	output reg [2:0] hold_count,								// CME 433 Lab 3
 	output reg [2:0] cache_wroffset, cache_rdoffset,	// CME 433 Lab 5
 	output reg cache_wren,										// CME 433 Lab 4
-	output reg cache_wrline, cache_rdline,					// CME 433 Lab 5
+	output reg [0:0] cache_wrline, cache_rdline,					// CME 433 Lab 5
 	output reg cache_wrentry, cache_rdentry				// CME 433 Lab 5
 	);
 
@@ -23,9 +23,9 @@ module program_sequencer(
 always @ *
 //if ( pc[7:5] != pm_addr[7:5] )		// CME 433 Lab 5
 //	start_hold = 1'b1;					// CME 433 Lab 5
-if ( tagID[pm_addr[3]][curentry] != pm_addr[7:4] )	// CME 433 Lab 5
+if ( tagID[pm_addr[3]][currentry] != pm_addr[7:4] )	// CME 433 Lab 5
 	start_hold = 1'b1;									// CME 433 Lab 5
-else if ( ( valid[pm_addr[3]][curentry] == 1'b0 ) && ( hold == 1'b0 ) )	// CME 433 Lab 5
+else if ( ( valid[pm_addr[3]][currentry] == 1'b0 ) && ( hold == 1'b0 ) )	// CME 433 Lab 5
 	start_hold = 1'b1;															// CME 433 Lab 5
 else if ( reset_1shot == 1'b1 )		// CME 433 Lab 4
 	start_hold = 1'b1;					// CME 433 Lab 4
@@ -108,66 +108,91 @@ else
 
 //// BEGIN CHANGES FROM CME 433 LAB 5 ////
 
-reg [2:0] tagID [0:3];
-reg 		 valid [0:3];
+reg [3:0] tagID [0:1][0:1];
+reg 		 valid [0:1][0:1];
 
 always @ ( posedge clk )
 if ( reset_1shot == 1'b1 ) begin
-	tagID[0] = 3'd0;
-	tagID[1] = 3'd0;
-	tagID[2] = 3'd0;
-	tagID[3] = 3'd0;
+	tagID[0][0] <= 4'd0;
+	tagID[0][1] <= 4'd0;
+	tagID[1][0] <= 4'd0;
+	tagID[1][1] <= 4'd0;
 	end
-else if ( ( start_hold == 1'b1 ) && ( pm_addr[4:3] == 2'd0 ) )
-	tagID[0] = pm_addr[7:5];
-else if ( ( start_hold == 1'b1 ) && ( pm_addr[4:3] == 2'd1 ) )
-	tagID[1] = pm_addr[7:5];
-else if ( ( start_hold == 1'b1 ) && ( pm_addr[4:3] == 2'd2 ) )
-	tagID[2] = pm_addr[7:5];
-else if ( ( start_hold == 1'b1 ) && ( pm_addr[4:3] == 2'd3 ) )
-	tagID[3] = pm_addr[7:5];
+else if ( start_hold == 1'b1 )
+	tagID[pm_addr[3]][~last_used[pm_addr[3]]] <= pm_addr[7:4];
 else begin
-	tagID[0] = tagID[0];
-	tagID[1] = tagID[1];
-	tagID[2] = tagID[2];
-	tagID[3] = tagID[3];
+	tagID[0][0] <= tagID[0][0];
+	tagID[0][1] <= tagID[0][1];
+	tagID[1][0] <= tagID[1][0];
+	tagID[1][1] <= tagID[1][1];
 	end
 
 
 always @ ( posedge clk )
 if ( reset_1shot == 1'b1 ) begin
-	valid[0] = 1'b0;
-	valid[1] = 1'b0;
-	valid[2] = 1'b0;
-	valid[3] = 1'b0;
+	valid[0][0] <= 1'b0;
+	valid[0][1] <= 1'b0;
+	valid[1][0] <= 1'b0;
+	valid[1][1] <= 1'b0;
 	end
-else if ( ( end_hold == 1'b1 ) && ( pm_addr[4:3] == 2'd0 ) )
-	valid[0] = 1'b1;
-else if ( ( end_hold == 1'b1 ) && ( pm_addr[4:3] == 2'd1 ) )
-	valid[1] = 1'b1;
-else if ( ( end_hold == 1'b1 ) && ( pm_addr[4:3] == 2'd2 ) )
-	valid[2] = 1'b1;
-else if ( ( end_hold == 1'b1 ) && ( pm_addr[4:3] == 2'd3 ) )
-	valid[3] = 1'b1;
+else if ( end_hold == 1'b1 )
+	valid[pm_addr[3]][~last_used[pm_addr[3]]] <= 1'b1;
 else begin
-	valid[0] = valid[0];
-	valid[1] = valid[1];
-	valid[2] = valid[2];
-	valid[3] = valid[3];
+	valid[0][0] = valid[0][0];
+	valid[0][1] = valid[0][1];
+	valid[1][0] = valid[1][0];
+	valid[1][1] = valid[1][1];
 	end
 
 
+(* keep *)reg currentry;
 always @ *
-cache_wrline = pc[3];
+if ( pm_addr[3] == 1'b0 )
+	if ( tagID[0][0] == pm_addr[7:4] )
+		currentry <= 1'b0;
+	else
+		currentry <= 1'b1;
+else
+	if ( tagID[1][0] == pm_addr[7:4] )
+		currentry <= 1'b0;
+	else
+		currentry <= 1'b1;
+
+
+// last used
+(* noprune *)reg last_used[0:1];
+always @ ( posedge clk )
+if ( reset_1shot == 1'b1 )
+	last_used[0] = 1'b1;
+else if ( ( pm_addr[3] == 1'b0 ) && ( hold == 1'b0 ) && ( start_hold == 1'b0 ) )
+	last_used[0] = currentry;
+else if ( ( pm_addr[3] == 1'b0 ) && ( end_hold == 1'b1 ) )
+	last_used[0] <= ~last_used[0];
+else
+	last_used[0] <= last_used[0];
+
+always @ ( posedge clk )
+if( reset_1shot == 1'b1 )
+	last_used[1] <= 1'b1;
+else if( pm_addr[3] == 1'b1 && hold == 1'b0 && start_hold == 1'b0 )
+	last_used[1] <= currentry;
+else if( pm_addr[3] == 1'b1 && end_hold == 1'b1 )
+	last_used[1] <= ~last_used[1];
+else
+	last_used[1] <= last_used[1];
+
 
 always @ *
-cache_rdline = pm_addr[3];		// [3:3] ??
+cache_wrline = pc[3:3];
+
+always @ *
+cache_rdline = pm_addr[3:3];		// [3:3] ??
 
 always @ *
 cache_rdoffset = pm_addr[2:0];
 
 always @ *
-cache_rdentry = currenrty;
+cache_rdentry = currentry;
 
 always @ *
 cache_wrentry = ~last_used[pm_addr[3]];

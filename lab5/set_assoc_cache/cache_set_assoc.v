@@ -29,7 +29,7 @@ begin
     byteena_a <= 7'd1 << wroffset;
 end
 
-cache_ram cache_ram_inst_0 (
+dual_port_ram cache_ram_inst_0 (
     .byteena_a ( byteena_a ),
     .clock ( ~clk ),
     .data ( {8{data}} ),
@@ -39,7 +39,7 @@ cache_ram cache_ram_inst_0 (
     .q ( q_tmp_0 )
     );
 
-cache_ram cache_ram_inst_1 (
+dual_port_ram cache_ram_inst_1 (
     .byteena_a ( byteena_a ),
     .clock ( ~clk ),
     .data ( {8{data}} ),

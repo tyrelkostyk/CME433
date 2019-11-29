@@ -57,17 +57,18 @@ wire [2:0] cache_wroffset, cache_rdoffset;
 wire cache_wrline, cache_rdline;
 wire cache_wren;
 wire [7:0] cache_q;
-wire [63:0] cache_q_tmp;
+wire [0:0] cache_wrentry, cache_rdentry;
 
-cache_multi multi_line_cache(
+cache_set_assoc multi_line_cache_set_assoc(
 	.clk(clk),
 	.data(pm_data),
 	.rdline(cache_rdline),
 	.rdoffset(cache_rdoffset),
+	.rdentry(cache_rdentry),
 	.wrline(cache_wrline),
 	.wroffset(cache_wroffset),
+	.wrentry(cache_wrentry),
 	.wren(cache_wren),
-	.q_tmp(cache_q_tmp),
 	.q(cache_q)
 );
 
@@ -108,7 +109,9 @@ program_sequencer prog_sequencer(
 	.cache_rdoffset(cache_rdoffset),	// CME 433 Lab 4
 	.cache_wren(cache_wren),			// CME 433 Lab 4
 	.cache_rdline(cache_rdline),		// CME 433 Lab 5
-	.cache_wrline(cache_wrline)	// CME 433 Lab 5
+	.cache_wrline(cache_wrline),		// CME 433 Lab 5
+	.cache_rdentry(cache_rdentry),	// CME 433 Lab 5
+	.cache_wrentry(cache_wrentry)		// CME 433 Lab 5
 );
 
 
