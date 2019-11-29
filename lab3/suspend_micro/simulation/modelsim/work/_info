@@ -30,7 +30,7 @@ r1
 Z3 o-work work
 Z4 tCvgOpt 0
 vhard_block
-Z5 !s110 1572650348
+Z5 !s110 1574439389
 !i10b 1
 !s100 mfmIMRF3Gz0EVd3V]P3KZ2
 I9h>nR>:<RTN=U@oG=f8eC2
@@ -44,7 +44,7 @@ R2
 r1
 !s85 0
 31
-Z9 !s108 1572650348.000000
+Z9 !s108 1574439389.000000
 Z10 !s107 /home/tck290/engr-ece/CME433/lab3/suspend_micro/simulation/modelsim/micro.vo|
 Z11 !s90 -reportprogress|300|-work|work|-stats=none|/home/tck290/engr-ece/CME433/lab3/suspend_micro/simulation/modelsim/micro.vo|
 !i113 1

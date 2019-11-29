@@ -1,0 +1,94 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+d/home/tck290/engr-ece
+vfinal_exam_testbench
+!s110 1571952288
+!i10b 1
+!s100 dQ<?h]X>hT^a[QhY?MzUl3
+II6YkO=]=oT8Ve^K0P`Yld3
+Z0 VDg1SIo80bB@j0V0VzS_@n1
+d/home/tck290/engr-ece/CME341/final_exam/micro_final_exam/simulation/modelsim
+w1571951488
+8/home/tck290/engr-ece/CME341/final_exam/micro_final_exam/simulation/modelsim/final_exam_test_bench.v
+F/home/tck290/engr-ece/CME341/final_exam/micro_final_exam/simulation/modelsim/final_exam_test_bench.v
+L0 2
+Z1 OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1571952288.000000
+!s107 /home/tck290/engr-ece/CME341/final_exam/micro_final_exam/simulation/modelsim/final_exam_test_bench.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tck290/engr-ece/CME341/final_exam/micro_final_exam/simulation/modelsim/final_exam_test_bench.v|
+!i113 1
+Z2 o-work work
+Z3 tCvgOpt 0
+vhard_block
+Z4 !s110 1574534741
+!i10b 1
+!s100 VWBMTJ>4o`TWJBGQ56GRS3
+IHE9<mOCRX`A;DGGN@iI0T2
+R0
+Z5 d/home/tck290/engr-ece/CME433/lab4/rom_more_clk/simulation/modelsim
+Z6 w1574534692
+Z7 8/home/tck290/engr-ece/CME433/lab4/rom_more_clk/simulation/modelsim/micro.vo
+Z8 F/home/tck290/engr-ece/CME433/lab4/rom_more_clk/simulation/modelsim/micro.vo
+L0 6829
+R1
+r1
+!s85 0
+31
+Z9 !s108 1574534740.000000
+Z10 !s107 /home/tck290/engr-ece/CME433/lab4/rom_more_clk/simulation/modelsim/micro.vo|
+Z11 !s90 -reportprogress|300|-work|work|-stats=none|/home/tck290/engr-ece/CME433/lab4/rom_more_clk/simulation/modelsim/micro.vo|
+!i113 1
+R2
+R3
+vmicro
+R4
+!i10b 1
+!s100 YzBmEF@Qh^X6ck^2nJ0R01
+IEDa7me:@^aODiZd;lEfVZ2
+R0
+R5
+R6
+R7
+R8
+L0 31
+R1
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R2
+R3
+vmicroprocessor_tb
+!s110 1574534740
+!i10b 1
+!s100 eJTiIg<[8]<CeU]a6ABk=2
+Ik69?7X0bz4IiFddDJ^GWA2
+R0
+R5
+w1574533015
+8/home/tck290/engr-ece/CME433/lab4/rom_more_clk/simulation/modelsim/microprocessor_tb.v
+F/home/tck290/engr-ece/CME433/lab4/rom_more_clk/simulation/modelsim/microprocessor_tb.v
+L0 3
+R1
+r1
+!s85 0
+31
+R9
+!s107 /home/tck290/engr-ece/CME433/lab4/rom_more_clk/simulation/modelsim/microprocessor_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|/home/tck290/engr-ece/CME433/lab4/rom_more_clk/simulation/modelsim/microprocessor_tb.v|
+!i113 1
+R2
+R3
