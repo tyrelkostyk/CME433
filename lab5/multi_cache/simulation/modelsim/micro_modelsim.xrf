@@ -1,4 +1,5 @@
 vendor_name = ModelSim
+source_file = 1, /home/tck290/engr-ece/CME433/lab5/multi_cache/cache_set_assoc.v
 source_file = 1, /home/tck290/engr-ece/CME433/lab5/multi_cache/cache.v
 source_file = 1, /home/tck290/engr-ece/CME433/lab5/multi_cache/dual_port_ram.qip
 source_file = 1, /home/tck290/engr-ece/CME433/lab5/multi_cache/dual_port_ram.v
@@ -22,8 +23,8 @@ source_file = 1, /opt/intelFPGA/18.1/quartus/libraries/megafunctions/altram.inc
 source_file = 1, /opt/intelFPGA/18.1/quartus/libraries/megafunctions/altdpram.inc
 source_file = 1, /opt/intelFPGA/18.1/quartus/libraries/megafunctions/cbx.lst
 source_file = 1, /home/tck290/engr-ece/CME433/lab5/multi_cache/db/altsyncram_b4q1.tdf
-source_file = 1, /home/tck290/engr-ece/CME433/lab5/multi_cache/db/altsyncram_inb1.tdf
-source_file = 1, /home/tck290/engr-ece/CME433/lab5/multi_cache/computational_test_Lab34.hex
+source_file = 1, /home/tck290/engr-ece/CME433/lab5/multi_cache/db/altsyncram_plc1.tdf
+source_file = 1, /home/tck290/engr-ece/CME433/lab5/multi_cache/computational_test_for_cache_Lab5.hex
 source_file = 1, /home/tck290/engr-ece/CME433/lab5/multi_cache/db/altsyncram_8ag1.tdf
 source_file = 1, /opt/intelFPGA/18.1/quartus/libraries/megafunctions/lpm_mult.tdf
 source_file = 1, /opt/intelFPGA/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc
