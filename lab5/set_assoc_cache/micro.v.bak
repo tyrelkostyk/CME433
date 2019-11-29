@@ -54,7 +54,7 @@ else
 
 //// BEGIN CHANGES FROM CME 433 LAB 5 ////
 wire [2:0] cache_wroffset, cache_rdoffset;
-wire cache_wrline, cache_rdline;
+wire [1:0] cache_wrline, cache_rdline;
 wire cache_wren;
 wire [7:0] cache_q;
 wire [63:0] cache_q_tmp;

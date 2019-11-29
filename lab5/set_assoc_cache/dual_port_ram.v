@@ -48,8 +48,8 @@ module dual_port_ram (
 	input	[7:0]  byteena_a;
 	input	  clock;
 	input	[63:0]  data;
-	input	[1:0]  rdaddress;
-	input	[1:0]  wraddress;
+	input	[0:0]  rdaddress;
+	input	[0:0]  wraddress;
 	input	  wren;
 	output	[63:0]  q;
 `ifndef ALTERA_RESERVED_QIS
@@ -98,15 +98,15 @@ module dual_port_ram (
 		altsyncram_component.clock_enable_output_b = "BYPASS",
 		altsyncram_component.intended_device_family = "Cyclone IV E",
 		altsyncram_component.lpm_type = "altsyncram",
-		altsyncram_component.numwords_a = 4,
-		altsyncram_component.numwords_b = 4,
+		altsyncram_component.numwords_a = 2,
+		altsyncram_component.numwords_b = 2,
 		altsyncram_component.operation_mode = "DUAL_PORT",
 		altsyncram_component.outdata_aclr_b = "NONE",
 		altsyncram_component.outdata_reg_b = "UNREGISTERED",
 		altsyncram_component.power_up_uninitialized = "FALSE",
 		altsyncram_component.read_during_write_mode_mixed_ports = "DONT_CARE",
-		altsyncram_component.widthad_a = 2,
-		altsyncram_component.widthad_b = 2,
+		altsyncram_component.widthad_a = 1,
+		altsyncram_component.widthad_b = 1,
 		altsyncram_component.width_a = 64,
 		altsyncram_component.width_b = 64,
 		altsyncram_component.width_byteena_a = 8;
@@ -147,7 +147,7 @@ endmodule
 // Retrieval info: PRIVATE: JTAG_ENABLED NUMERIC "0"
 // Retrieval info: PRIVATE: JTAG_ID STRING "NONE"
 // Retrieval info: PRIVATE: MAXIMUM_DEPTH NUMERIC "0"
-// Retrieval info: PRIVATE: MEMSIZE NUMERIC "256"
+// Retrieval info: PRIVATE: MEMSIZE NUMERIC "128"
 // Retrieval info: PRIVATE: MEM_IN_BITS NUMERIC "0"
 // Retrieval info: PRIVATE: MIFfilename STRING ""
 // Retrieval info: PRIVATE: OPERATION_MODE NUMERIC "2"
@@ -185,15 +185,15 @@ endmodule
 // Retrieval info: CONSTANT: CLOCK_ENABLE_OUTPUT_B STRING "BYPASS"
 // Retrieval info: CONSTANT: INTENDED_DEVICE_FAMILY STRING "Cyclone IV E"
 // Retrieval info: CONSTANT: LPM_TYPE STRING "altsyncram"
-// Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "4"
-// Retrieval info: CONSTANT: NUMWORDS_B NUMERIC "4"
+// Retrieval info: CONSTANT: NUMWORDS_A NUMERIC "2"
+// Retrieval info: CONSTANT: NUMWORDS_B NUMERIC "2"
 // Retrieval info: CONSTANT: OPERATION_MODE STRING "DUAL_PORT"
 // Retrieval info: CONSTANT: OUTDATA_ACLR_B STRING "NONE"
 // Retrieval info: CONSTANT: OUTDATA_REG_B STRING "UNREGISTERED"
 // Retrieval info: CONSTANT: POWER_UP_UNINITIALIZED STRING "FALSE"
 // Retrieval info: CONSTANT: READ_DURING_WRITE_MODE_MIXED_PORTS STRING "DONT_CARE"
-// Retrieval info: CONSTANT: WIDTHAD_A NUMERIC "2"
-// Retrieval info: CONSTANT: WIDTHAD_B NUMERIC "2"
+// Retrieval info: CONSTANT: WIDTHAD_A NUMERIC "1"
+// Retrieval info: CONSTANT: WIDTHAD_B NUMERIC "1"
 // Retrieval info: CONSTANT: WIDTH_A NUMERIC "64"
 // Retrieval info: CONSTANT: WIDTH_B NUMERIC "64"
 // Retrieval info: CONSTANT: WIDTH_BYTEENA_A NUMERIC "8"
@@ -201,11 +201,11 @@ endmodule
 // Retrieval info: USED_PORT: clock 0 0 0 0 INPUT VCC "clock"
 // Retrieval info: USED_PORT: data 0 0 64 0 INPUT NODEFVAL "data[63..0]"
 // Retrieval info: USED_PORT: q 0 0 64 0 OUTPUT NODEFVAL "q[63..0]"
-// Retrieval info: USED_PORT: rdaddress 0 0 2 0 INPUT NODEFVAL "rdaddress[1..0]"
-// Retrieval info: USED_PORT: wraddress 0 0 2 0 INPUT NODEFVAL "wraddress[1..0]"
+// Retrieval info: USED_PORT: rdaddress 0 0 1 0 INPUT NODEFVAL "rdaddress[0..0]"
+// Retrieval info: USED_PORT: wraddress 0 0 1 0 INPUT NODEFVAL "wraddress[0..0]"
 // Retrieval info: USED_PORT: wren 0 0 0 0 INPUT GND "wren"
-// Retrieval info: CONNECT: @address_a 0 0 2 0 wraddress 0 0 2 0
-// Retrieval info: CONNECT: @address_b 0 0 2 0 rdaddress 0 0 2 0
+// Retrieval info: CONNECT: @address_a 0 0 1 0 wraddress 0 0 1 0
+// Retrieval info: CONNECT: @address_b 0 0 1 0 rdaddress 0 0 1 0
 // Retrieval info: CONNECT: @byteena_a 0 0 8 0 byteena_a 0 0 8 0
 // Retrieval info: CONNECT: @clock0 0 0 0 0 clock 0 0 0 0
 // Retrieval info: CONNECT: @data_a 0 0 64 0 data 0 0 64 0

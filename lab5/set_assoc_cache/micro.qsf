@@ -50,7 +50,6 @@ set_global_assignment -name VERILOG_FILE computational_unit.v
 set_global_assignment -name VERILOG_FILE data_memory.v
 set_global_assignment -name VERILOG_FILE instruction_decoder.v
 set_global_assignment -name VERILOG_FILE cache_set_assoc.v
-set_global_assignment -name VERILOG_FILE dual_port_ram.v
 set_global_assignment -name VERILOG_FILE program_memory.v
 set_global_assignment -name VERILOG_FILE program_sequencer.v
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files

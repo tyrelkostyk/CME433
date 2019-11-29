@@ -10,8 +10,7 @@ module program_sequencer(
 	output reg [2:0] hold_count,								// CME 433 Lab 3
 	output reg [2:0] cache_wroffset, cache_rdoffset,	// CME 433 Lab 5
 	output reg cache_wren,										// CME 433 Lab 4
-	output reg cache_wrline, cache_rdline,					// CME 433 Lab 5
-	output reg cache_wrentry, cache_rdentry				// CME 433 Lab 5
+	output reg [1:0] cache_wrline, cache_rdline			// CME 433 Lab 5
 	);
 
 
@@ -23,9 +22,9 @@ module program_sequencer(
 always @ *
 //if ( pc[7:5] != pm_addr[7:5] )		// CME 433 Lab 5
 //	start_hold = 1'b1;					// CME 433 Lab 5
-if ( tagID[pm_addr[3]][curentry] != pm_addr[7:4] )	// CME 433 Lab 5
+if ( tagID[pm_addr[4:3]] != pm_addr[7:5] )	// CME 433 Lab 5
 	start_hold = 1'b1;									// CME 433 Lab 5
-else if ( ( valid[pm_addr[3]][curentry] == 1'b0 ) && ( hold == 1'b0 ) )	// CME 433 Lab 5
+else if ( ( valid[pm_addr[4:3]] == 1'b0 ) && ( hold == 1'b0 ) )	// CME 433 Lab 5 (== 2'b0, NOT == 1'b0 ?? )	
 	start_hold = 1'b1;															// CME 433 Lab 5
 else if ( reset_1shot == 1'b1 )		// CME 433 Lab 4
 	start_hold = 1'b1;					// CME 433 Lab 4
@@ -101,7 +100,7 @@ else if ( start_hold == 1'b1 )
 else if ( sync_reset == 1'b1 )
 	rom_address = {5'd0,hold_count+3'd1};
 else
-	rom_address = {tagID[pc[3]][~last_used[pc[3]]],pc[3],hold_count+3'd1};	// CME 433 LAB 5
+	rom_address = {tagID[pc[4:3]],pc[4:3],hold_count+3'd1};
 
 ////  END CHANGES FROM CME 433 LAB 4  ////
 
@@ -158,19 +157,14 @@ else begin
 
 
 always @ *
-cache_wrline = pc[3];
+cache_wrline = pc[4:3];
 
 always @ *
-cache_rdline = pm_addr[3];		// [3:3] ??
+cache_rdline = pm_addr[4:3];
 
 always @ *
 cache_rdoffset = pm_addr[2:0];
 
-always @ *
-cache_rdentry = currenrty;
-
-always @ *
-cache_wrentry = ~last_used[pm_addr[3]];
 
 ////  END CHANGES FROM CME 433 LAB 5  ////
 
