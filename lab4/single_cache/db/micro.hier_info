@@ -116,6 +116,14 @@ hold_count[1] <= program_sequencer:prog_sequencer.hold_count
 hold_count[2] <= program_sequencer:prog_sequencer.hold_count
 hold_count[3] <= program_sequencer:prog_sequencer.hold_count
 hold_count[4] <= program_sequencer:prog_sequencer.hold_count
+cache_q[0] <= cache:single_line_cache.q
+cache_q[1] <= cache:single_line_cache.q
+cache_q[2] <= cache:single_line_cache.q
+cache_q[3] <= cache:single_line_cache.q
+cache_q[4] <= cache:single_line_cache.q
+cache_q[5] <= cache:single_line_cache.q
+cache_q[6] <= cache:single_line_cache.q
+cache_q[7] <= cache:single_line_cache.q
 
 
 |micro|cache:single_line_cache

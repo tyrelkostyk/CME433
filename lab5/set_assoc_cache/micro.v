@@ -11,7 +11,8 @@ module micro (
 	output [3:0] x0, x1, y0, y1, r, m, i,
 	output zero_flag,
 	output hold_out, hold, start_hold, end_hold, 	// CME 433 Lab 3
-	output [2:0] hold_count     							// CME 433 Lab 3
+	output [2:0] hold_count,     							// CME 433 Lab 3
+	output [7:0] cache_q
 	);
 
 //wire [8:0] register_enables;				// made outputs for final exam
@@ -56,7 +57,7 @@ else
 wire [2:0] cache_wroffset, cache_rdoffset;
 wire cache_wrline, cache_rdline;
 wire cache_wren;
-wire [7:0] cache_q;
+//wire [7:0] cache_q;
 wire [0:0] cache_wrentry, cache_rdentry;
 
 cache_set_assoc multi_line_cache_set_assoc(

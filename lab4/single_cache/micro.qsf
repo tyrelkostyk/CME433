@@ -99,8 +99,6 @@ set_global_assignment -name VERILOG_FILE computational_unit.v
 set_global_assignment -name VERILOG_FILE data_memory.v
 set_global_assignment -name VERILOG_FILE cache.v
 set_global_assignment -name VERILOG_FILE instruction_decoder.v
-set_global_assignment -name VERILOG_FILE dual_port_ram.v
-set_global_assignment -name VERILOG_FILE program_memory.v
 set_global_assignment -name VERILOG_FILE program_sequencer.v
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"

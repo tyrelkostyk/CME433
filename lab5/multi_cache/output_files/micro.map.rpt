@@ -1,5 +1,5 @@
 Analysis & Synthesis report for micro
-Fri Nov 29 15:56:06 2019
+Sat Nov 30 12:03:29 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -56,16 +56,16 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Nov 29 15:56:06 2019           ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 30 12:03:29 2019           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                      ; micro                                           ;
 ; Top-level Entity Name              ; micro                                           ;
 ; Family                             ; Cyclone IV E                                    ;
-; Total logic elements               ; 321                                             ;
-;     Total combinational functions  ; 287                                             ;
+; Total logic elements               ; 328                                             ;
+;     Total combinational functions  ; 294                                             ;
 ;     Dedicated logic registers      ; 71                                              ;
 ; Total registers                    ; 71                                              ;
-; Total pins                         ; 115                                             ;
+; Total pins                         ; 123                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 2,368                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -216,31 +216,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 321       ;
+; Estimated Total logic elements              ; 328       ;
 ;                                             ;           ;
-; Total combinational functions               ; 287       ;
+; Total combinational functions               ; 294       ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 187       ;
-;     -- 3 input functions                    ; 66        ;
-;     -- <=2 input functions                  ; 34        ;
+;     -- 4 input functions                    ; 192       ;
+;     -- 3 input functions                    ; 65        ;
+;     -- <=2 input functions                  ; 37        ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 259       ;
+;     -- normal mode                          ; 266       ;
 ;     -- arithmetic mode                      ; 28        ;
 ;                                             ;           ;
 ; Total registers                             ; 71        ;
 ;     -- Dedicated logic registers            ; 71        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 115       ;
+; I/O pins                                    ; 123       ;
 ; Total memory bits                           ; 2368      ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
 ; Maximum fan-out                             ; 147       ;
-; Total fan-out                               ; 2055      ;
-; Average fan-out                             ; 3.09      ;
+; Total fan-out                               ; 2094      ;
+; Average fan-out                             ; 3.05      ;
 +---------------------------------------------+-----------+
 
 
@@ -249,8 +249,8 @@ refer to the applicable agreement for further details.
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                             ; Entity Name         ; Library Name ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |micro                                       ; 287 (40)            ; 71 (1)                    ; 2368        ; 0            ; 0       ; 0         ; 115  ; 0            ; |micro                                                                                                                          ; micro               ; work         ;
-;    |cache_multi:multi_line_cache|            ; 8 (8)               ; 0 (0)                     ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |micro|cache_multi:multi_line_cache                                                                                             ; cache_multi         ; work         ;
+; |micro                                       ; 294 (8)             ; 71 (1)                    ; 2368        ; 0            ; 0       ; 0         ; 123  ; 0            ; |micro                                                                                                                          ; micro               ; work         ;
+;    |cache_multi:multi_line_cache|            ; 48 (48)             ; 0 (0)                     ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |micro|cache_multi:multi_line_cache                                                                                             ; cache_multi         ; work         ;
 ;       |dual_port_ram:cache_ram_inst|         ; 0 (0)               ; 0 (0)                     ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |micro|cache_multi:multi_line_cache|dual_port_ram:cache_ram_inst                                                                ; dual_port_ram       ; work         ;
 ;          |altsyncram:altsyncram_component|   ; 0 (0)               ; 0 (0)                     ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |micro|cache_multi:multi_line_cache|dual_port_ram:cache_ram_inst|altsyncram:altsyncram_component                                ; altsyncram          ; work         ;
 ;             |altsyncram_b4q1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 256         ; 0            ; 0       ; 0         ; 0    ; 0            ; |micro|cache_multi:multi_line_cache|dual_port_ram:cache_ram_inst|altsyncram:altsyncram_component|altsyncram_b4q1:auto_generated ; altsyncram_b4q1     ; work         ;
@@ -264,7 +264,7 @@ refer to the applicable agreement for further details.
 ;    |program_memory:prog_mem|                 ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |micro|program_memory:prog_mem                                                                                                  ; program_memory      ; work         ;
 ;       |altsyncram:altsyncram_component|      ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |micro|program_memory:prog_mem|altsyncram:altsyncram_component                                                                  ; altsyncram          ; work         ;
 ;          |altsyncram_plc1:auto_generated|    ; 0 (0)               ; 0 (0)                     ; 2048        ; 0            ; 0       ; 0         ; 0    ; 0            ; |micro|program_memory:prog_mem|altsyncram:altsyncram_component|altsyncram_plc1:auto_generated                                   ; altsyncram_plc1     ; work         ;
-;    |program_sequencer:prog_sequencer|        ; 86 (86)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |micro|program_sequencer:prog_sequencer                                                                                         ; program_sequencer   ; work         ;
+;    |program_sequencer:prog_sequencer|        ; 85 (85)             ; 29 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |micro|program_sequencer:prog_sequencer                                                                                         ; program_sequencer   ; work         ;
 +----------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -311,21 +311,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
 ; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |micro|computational_unit:comp_unit|r[2]                  ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |micro|program_sequencer:prog_sequencer|tagID[0][1]       ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |micro|program_sequencer:prog_sequencer|tagID[2][2]       ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |micro|program_sequencer:prog_sequencer|tagID[3][0]       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |micro|program_sequencer:prog_sequencer|tagID[0][2]       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |micro|program_sequencer:prog_sequencer|tagID[2][0]       ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |micro|program_sequencer:prog_sequencer|tagID[3][1]       ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |micro|program_sequencer:prog_sequencer|tagID[1][1]       ;
 ; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |micro|program_sequencer:prog_sequencer|cache_wroffset[0] ;
-; 9:1                ; 5 bits    ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; Yes        ; |micro|instruction_decoder:intr_decoder|ir[0]             ;
-; 9:1                ; 3 bits    ; 18 LEs        ; 18 LEs               ; 0 LEs                  ; Yes        ; |micro|instruction_decoder:intr_decoder|ir[6]             ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |micro|program_sequencer:prog_sequencer|Mux3              ;
+; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |micro|program_sequencer:prog_sequencer|Mux2              ;
 ; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |micro|program_sequencer:prog_sequencer|rom_address[0]    ;
 ; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; No         ; |micro|instruction_decoder:intr_decoder|x_sel             ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |micro|program_sequencer:prog_sequencer|rom_address[3]    ;
 ; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |micro|program_sequencer:prog_sequencer|pm_addr[6]        ;
-; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |micro|program_sequencer:prog_sequencer|cache_rdoffset[1] ;
+; 8:1                ; 8 bits    ; 40 LEs        ; 40 LEs               ; 0 LEs                  ; No         ; |micro|cache_multi:multi_line_cache|Mux5                  ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; No         ; |micro|program_sequencer:prog_sequencer|cache_rdoffset[0] ;
 ; 5:1                ; 3 bits    ; 9 LEs         ; 9 LEs                ; 0 LEs                  ; No         ; |micro|instruction_decoder:intr_decoder|source_sel[2]     ;
-; 16:1               ; 4 bits    ; 40 LEs        ; 28 LEs               ; 12 LEs                 ; No         ; |micro|computational_unit:comp_unit|Mux0                  ;
+; 16:1               ; 4 bits    ; 40 LEs        ; 28 LEs               ; 12 LEs                 ; No         ; |micro|computational_unit:comp_unit|Mux3                  ;
 ; 7:1                ; 3 bits    ; 12 LEs        ; 12 LEs               ; 0 LEs                  ; No         ; |micro|program_sequencer:prog_sequencer|rom_address[7]    ;
 ; 17:1               ; 3 bits    ; 33 LEs        ; 18 LEs               ; 15 LEs                 ; No         ; |micro|computational_unit:comp_unit|alu_out[1]            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------------+
@@ -661,25 +660,25 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 115                         ;
+; boundary_port         ; 123                         ;
 ; cycloneiii_ff         ; 71                          ;
 ;     ENA               ; 51                          ;
 ;     ENA SLD           ; 4                           ;
 ;     SLD               ; 1                           ;
 ;     plain             ; 15                          ;
-; cycloneiii_lcell_comb ; 289                         ;
+; cycloneiii_lcell_comb ; 296                         ;
 ;     arith             ; 28                          ;
 ;         2 data inputs ; 9                           ;
 ;         3 data inputs ; 19                          ;
-;     normal            ; 261                         ;
+;     normal            ; 268                         ;
 ;         1 data inputs ; 3                           ;
-;         2 data inputs ; 24                          ;
-;         3 data inputs ; 47                          ;
-;         4 data inputs ; 187                         ;
+;         2 data inputs ; 27                          ;
+;         3 data inputs ; 46                          ;
+;         4 data inputs ; 192                         ;
 ; cycloneiii_ram_block  ; 76                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 11.00                       ;
-; Average LUT depth     ; 6.37                        ;
+; Max LUT depth         ; 12.00                       ;
+; Average LUT depth     ; 6.53                        ;
 +-----------------------+-----------------------------+
 
 
@@ -688,7 +687,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -698,7 +697,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
-    Info: Processing started: Fri Nov 29 15:55:50 2019
+    Info: Processing started: Sat Nov 30 12:03:13 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off multi_cache -c micro
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -723,7 +722,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file cache_m
 Info (12021): Found 1 design units, including 1 entities, in source file program_sequencer.v
     Info (12023): Found entity 1: program_sequencer File: /home/tck290/engr-ece/CME433/lab5/multi_cache/program_sequencer.v Line: 1
 Info (12127): Elaborating entity "micro" for the top level hierarchy
-Info (12128): Elaborating entity "cache_multi" for hierarchy "cache_multi:multi_line_cache" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/micro.v Line: 72
+Info (12128): Elaborating entity "cache_multi" for hierarchy "cache_multi:multi_line_cache" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/micro.v Line: 73
 Info (12128): Elaborating entity "dual_port_ram" for hierarchy "cache_multi:multi_line_cache|dual_port_ram:cache_ram_inst" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/cache_multi.v Line: 36
 Info (12128): Elaborating entity "altsyncram" for hierarchy "cache_multi:multi_line_cache|dual_port_ram:cache_ram_inst|altsyncram:altsyncram_component" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/dual_port_ram.v Line: 91
 Info (12130): Elaborated megafunction instantiation "cache_multi:multi_line_cache|dual_port_ram:cache_ram_inst|altsyncram:altsyncram_component" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/dual_port_ram.v Line: 91
@@ -751,7 +750,7 @@ Info (12133): Instantiated megafunction "cache_multi:multi_line_cache|dual_port_
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_b4q1.tdf
     Info (12023): Found entity 1: altsyncram_b4q1 File: /home/tck290/engr-ece/CME433/lab5/multi_cache/db/altsyncram_b4q1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_b4q1" for hierarchy "cache_multi:multi_line_cache|dual_port_ram:cache_ram_inst|altsyncram:altsyncram_component|altsyncram_b4q1:auto_generated" File: /opt/intelFPGA/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "program_memory" for hierarchy "program_memory:prog_mem" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/micro.v Line: 84
+Info (12128): Elaborating entity "program_memory" for hierarchy "program_memory:prog_mem" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/micro.v Line: 85
 Info (12128): Elaborating entity "altsyncram" for hierarchy "program_memory:prog_mem|altsyncram:altsyncram_component" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/program_memory.v Line: 81
 Info (12130): Elaborated megafunction instantiation "program_memory:prog_mem|altsyncram:altsyncram_component" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/program_memory.v Line: 81
 Info (12133): Instantiated megafunction "program_memory:prog_mem|altsyncram:altsyncram_component" with the following parameter: File: /home/tck290/engr-ece/CME433/lab5/multi_cache/program_memory.v Line: 81
@@ -772,10 +771,10 @@ Info (12133): Instantiated megafunction "program_memory:prog_mem|altsyncram:alts
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_plc1.tdf
     Info (12023): Found entity 1: altsyncram_plc1 File: /home/tck290/engr-ece/CME433/lab5/multi_cache/db/altsyncram_plc1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_plc1" for hierarchy "program_memory:prog_mem|altsyncram:altsyncram_component|altsyncram_plc1:auto_generated" File: /opt/intelFPGA/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
-Info (12128): Elaborating entity "program_sequencer" for hierarchy "program_sequencer:prog_sequencer" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/micro.v Line: 112
-Info (12128): Elaborating entity "instruction_decoder" for hierarchy "instruction_decoder:intr_decoder" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/micro.v Line: 134
-Info (12128): Elaborating entity "computational_unit" for hierarchy "computational_unit:comp_unit" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/micro.v Line: 163
-Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:data_mem" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/micro.v Line: 172
+Info (12128): Elaborating entity "program_sequencer" for hierarchy "program_sequencer:prog_sequencer" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/micro.v Line: 113
+Info (12128): Elaborating entity "instruction_decoder" for hierarchy "instruction_decoder:intr_decoder" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/micro.v Line: 135
+Info (12128): Elaborating entity "computational_unit" for hierarchy "computational_unit:comp_unit" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/micro.v Line: 164
+Info (12128): Elaborating entity "data_memory" for hierarchy "data_memory:data_mem" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/micro.v Line: 173
 Info (12128): Elaborating entity "altsyncram" for hierarchy "data_memory:data_mem|altsyncram:altsyncram_component" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/data_memory.v Line: 85
 Info (12130): Elaborated megafunction instantiation "data_memory:data_mem|altsyncram:altsyncram_component" File: /home/tck290/engr-ece/CME433/lab5/multi_cache/data_memory.v Line: 85
 Info (12133): Instantiated megafunction "data_memory:data_mem|altsyncram:altsyncram_component" with the following parameter: File: /home/tck290/engr-ece/CME433/lab5/multi_cache/data_memory.v Line: 85
@@ -821,14 +820,14 @@ Info (13014): Ignored 48 buffer(s)
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 526 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 541 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 109 output pins
-    Info (21061): Implemented 335 logic cells
+    Info (21059): Implemented 117 output pins
+    Info (21061): Implemented 342 logic cells
     Info (21064): Implemented 76 RAM segments
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 1115 megabytes
-    Info: Processing ended: Fri Nov 29 15:56:06 2019
+    Info: Peak virtual memory: 1110 megabytes
+    Info: Processing ended: Sat Nov 30 12:03:29 2019
     Info: Elapsed time: 00:00:16
     Info: Total CPU time (on all processors): 00:00:33
 

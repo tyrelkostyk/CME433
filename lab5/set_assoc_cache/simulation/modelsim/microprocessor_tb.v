@@ -12,6 +12,7 @@ module microprocessor_tb;
 	wire [7:0] pm_address, pc, ir;
 	wire hold_out, hold, start_hold, end_hold;
 	wire [2:0] hold_count;
+	wire [7:0] cache_q;
 
 	// Instantiate the Unit Under Test (UUT)
 	micro uut (
@@ -26,7 +27,8 @@ module microprocessor_tb;
 	.hold_count(hold_count), 	// CME 433
 	.hold(hold),		 	// CME 433
 	.start_hold(start_hold), 	// CME 433
-	.end_hold(end_hold)	 	// CME 433
+	.end_hold(end_hold),	 	// CME 433
+	.cache_q(cache_q)
 	);
 
     // length of simulation

@@ -9,21 +9,21 @@ z2
 cModel Technology
 d/home/tck290/engr-ece
 vhard_block
-Z0 !s110 1575055123
+Z0 !s110 1575137083
 !i10b 1
-!s100 AY_QkCamjoPml^41MHCUl0
-I_KBEhfA2`V<MSj3R6iCn61
+!s100 D^cNnhIFmfOGKiKXgEWbC2
+IZiZ:Imz_iCMO9Jz2RT_X02
 Z1 VDg1SIo80bB@j0V0VzS_@n1
 Z2 d/home/tck290/engr-ece/CME433/lab5/multi_cache/simulation/modelsim
-Z3 w1574998632
+Z3 w1575137042
 Z4 8/home/tck290/engr-ece/CME433/lab5/multi_cache/simulation/modelsim/micro.vo
 Z5 F/home/tck290/engr-ece/CME433/lab5/multi_cache/simulation/modelsim/micro.vo
-L0 9072
+L0 9410
 Z6 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z7 !s108 1575055123.000000
+Z7 !s108 1575137083.000000
 Z8 !s107 /home/tck290/engr-ece/CME433/lab5/multi_cache/simulation/modelsim/micro.vo|
 Z9 !s90 -reportprogress|300|-work|work|-stats=none|/home/tck290/engr-ece/CME433/lab5/multi_cache/simulation/modelsim/micro.vo|
 !i113 1
@@ -32,8 +32,8 @@ Z11 tCvgOpt 0
 vmicro
 R0
 !i10b 1
-!s100 Y[iRHFbWRaVjPEX]cc;M50
-I7Al^OP2f_=fc@AijhhSXM1
+!s100 l_UT0M;id3Z<C@Wj`D;VK3
+IhhYOo_B7b2?WfolklRiGP2
 R1
 R2
 R3
@@ -53,11 +53,11 @@ R11
 vmicroprocessor_tb
 R0
 !i10b 1
-!s100 DdgoP0an]5UmR^`ZlzVC:3
-I>KFV^5>L2GXKUTEdjjkEI0
+!s100 97FUNdl^7k3>M>UOfJ[o_0
+I3MzOWn`GX5[<AfE>C=WCG1
 R1
 R2
-w1574998970
+w1575136447
 8/home/tck290/engr-ece/CME433/lab5/multi_cache/simulation/modelsim/microprocessor_tb.v
 F/home/tck290/engr-ece/CME433/lab5/multi_cache/simulation/modelsim/microprocessor_tb.v
 L0 3

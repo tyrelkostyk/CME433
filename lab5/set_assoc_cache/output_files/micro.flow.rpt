@@ -1,5 +1,5 @@
 Flow report for micro
-Fri Nov 29 15:28:10 2019
+Sat Nov 30 12:13:00 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Standard Edition
 
 
@@ -40,7 +40,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Fri Nov 29 15:28:10 2019           ;
+; Flow Status                        ; Successful - Sat Nov 30 12:13:00 2019           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Standard Edition ;
 ; Revision Name                      ; micro                                           ;
 ; Top-level Entity Name              ; micro                                           ;
@@ -48,10 +48,10 @@ refer to the applicable agreement for further details.
 ; Device                             ; EP4CE115F29C7                                   ;
 ; Timing Models                      ; Final                                           ;
 ; Total logic elements               ; 357 / 114,480 ( < 1 % )                         ;
-;     Total combinational functions  ; 349 / 114,480 ( < 1 % )                         ;
+;     Total combinational functions  ; 348 / 114,480 ( < 1 % )                         ;
 ;     Dedicated logic registers      ; 77 / 114,480 ( < 1 % )                          ;
 ; Total registers                    ; 77                                              ;
-; Total pins                         ; 115 / 529 ( 22 % )                              ;
+; Total pins                         ; 123 / 529 ( 23 % )                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 2,368 / 3,981,312 ( < 1 % )                     ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                 ;
@@ -64,7 +64,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/29/2019 15:27:23 ;
+; Start date & time ; 11/30/2019 12:12:10 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; micro               ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 345046515778.157506284304462           ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 345046515779.157513753016912           ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -94,12 +94,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:15     ; 1.0                     ; 1070 MB             ; 00:00:31                           ;
-; Fitter               ; 00:00:21     ; 1.0                     ; 1577 MB             ; 00:00:26                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 939 MB              ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 1005 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1177 MB             ; 00:00:01                           ;
-; Total                ; 00:00:43     ; --                      ; --                  ; 00:01:03                           ;
+; Analysis & Synthesis ; 00:00:16     ; 1.0                     ; 1064 MB             ; 00:00:33                           ;
+; Fitter               ; 00:00:21     ; 1.0                     ; 1566 MB             ; 00:00:27                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 941 MB              ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 1008 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 1178 MB             ; 00:00:01                           ;
+; Total                ; 00:00:44     ; --                      ; --                  ; 00:01:06                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -108,11 +108,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+---------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name ; OS Version ; Processor type ;
 +----------------------+------------------+---------+------------+----------------+
-; Analysis & Synthesis ; engr-tau-18L     ; Red Hat ; Red Hat    ; x86_64         ;
-; Fitter               ; engr-tau-18L     ; Red Hat ; Red Hat    ; x86_64         ;
-; Assembler            ; engr-tau-18L     ; Red Hat ; Red Hat    ; x86_64         ;
-; Timing Analyzer      ; engr-tau-18L     ; Red Hat ; Red Hat    ; x86_64         ;
-; EDA Netlist Writer   ; engr-tau-18L     ; Red Hat ; Red Hat    ; x86_64         ;
+; Analysis & Synthesis ; engr-tau-19L     ; Red Hat ; Red Hat    ; x86_64         ;
+; Fitter               ; engr-tau-19L     ; Red Hat ; Red Hat    ; x86_64         ;
+; Assembler            ; engr-tau-19L     ; Red Hat ; Red Hat    ; x86_64         ;
+; Timing Analyzer      ; engr-tau-19L     ; Red Hat ; Red Hat    ; x86_64         ;
+; EDA Netlist Writer   ; engr-tau-19L     ; Red Hat ; Red Hat    ; x86_64         ;
 +----------------------+------------------+---------+------------+----------------+
 
 
