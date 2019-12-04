@@ -24,17 +24,17 @@
 //define constant
 //  WA: width of matrix A
 //  HA: height of matrix A
-#define WA 512
-#define HA 512
-#define WB WA
-#define HB HA
-#define WC WA
-#define HC HA
+#define WA	256
+#define HA	256
+#define WB	WA
+#define HB	HA
+#define WC	WA
+#define HC	HA
 
 #define MAX_SOURCE_SIZE (0x100000)
 
 //This DEBUG symbol can be useful for troubleshooting
-//#define DEBUG 1
+#define DEBUG 1
 
 //If you are clever, you'd pass matrix size as a parameter...
 int main(int argc, char** argv)
@@ -62,19 +62,26 @@ int main(int argc, char** argv)
 
     //host memory for vectors
     float *h_A;
-	float *h_B;
-	float *h_C;
+		float *h_B;
+		float *h_C;
 
-    //allocate host memory for vectorA, vectorB, and vectorC
+	  //allocate host memory for vectorA, vectorB, and vectorC
+		unsigned int sizeA = WA * HA;
+		unsigned int memA = sizeof(float) * sizeA;
+		h_A = malloc( memA );
 
+		unsigned int sizeB = WB * HB;
+		unsigned int memB = sizeof(float) * sizeB;
+		h_B = malloc( memB );
 
-
-
+		unsigned int sizeC = WC * HC;
+		unsigned int memC = sizeof(float) * sizeC;
+		h_C = malloc( memC );
 
     //put random value into Matrix A and Matrix B
 #ifndef DEBUG
     int seed;
-    seed = 256; //Should Randomize this at some point...
+    seed = time(NULL);
     srand(seed);
 #endif
     int i;
@@ -99,87 +106,221 @@ int main(int argc, char** argv)
     printf("Initializing OpenCL device...\n");
 
     //get platform ID
-
-
-
-
+		cl_uint dev_cnt = 0;
+		clGetPlatformIDs( 0, 0, &dev_cnt ); //get the number of devices
+		cl_platform_id platform_ids[ dev_cnt ]; //allocate for them
+		clGetPlatformIDs( dev_cnt, platform_ids, NULL ); //get their IDs
 
     //choose a compute device
+		int gpu = 1;
+		err = clGetDeviceIDs(
+			platform_ids[0],
+			gpu? CL_DEVICE_TYPE_GPU : CL_DEVICE_TYPE_CPU,
+			1,
+			&device_id,
+			NULL);
 
-
-
+		if ( err != CL_SUCCESS ) {
+			printf("Error: Failed to create a device group!\n");
+			return EXIT_FAILURE;
+		}
 
     //print Device Information
-
-
-
+		char* value;
+		size_t valueSize;
+		clGetDeviceInfo( device_id, CL_DEVICE_NAME, 0, NULL, &valueSize );
+		value = malloc( valueSize );
+		clGetDeviceInfo( device_id, CL_DEVICE_NAME, valueSize, value, NULL );
+		printf( "Device: %s\n", value );
+		free( value );
 
     //create a compute context
-
-
-
+		context = clCreateContext( 0, 1, &device_id, NULL, NULL, &err );
+		if ( !context ) {
+			printf("Error: Failed to create a compute context!\n");
+			return EXIT_FAILURE;
+		}
 
     //create a command commands
+		commands = clCreateCommandQueue(
+			context,
+			device_id,
+			CL_QUEUE_PROFILING_ENABLE,
+			&err
+		);
 
-
-
+		if ( !commands ) {
+			printf("Error: Failed to create a command queue!\n");
+			return EXIT_FAILURE;
+		}
 
     //create the compute program from the source file
     //read the source file
+		FILE *fp;
+		const char fileName[] = "./matrixmul_kernel.cl";
+		size_t kernel_size;
+		char *KernelSource;
 
-
-
+		fp = fopen( fileName, "r" );
+		if ( !fp ) {
+			fprintf( stderr, "Failed to load kernel.\n" );
+			exit( 1 );
+		}
+		KernelSource = malloc( MAX_SOURCE_SIZE );
+		kernel_size = fread( KernelSource, 1, MAX_SOURCE_SIZE, fp );
+		fclose( fp );
 
     //create program
+		program = clCreateProgramWithSource(
+			context,
+			1,
+			(const char **)&KernelSource,
+			(const size_t *)&kernel_size,
+			&err
+		);
 
-
-
+		if ( !program ) {
+			printf( "Error: Failed to create compute program!\n" );
+			return EXIT_FAILURE;
+		}
 
     //build the program executable
+		err = clBuildProgram( program, 1, &device_id, NULL, NULL, NULL );
+		if ( err != CL_SUCCESS ) {
+			size_t len;
+			char buffer[2048];
+			printf( "Error: Failed to build program executable!\n" );
+			clGetProgramBuildInfo(
+				program,
+				device_id,
+				CL_PROGRAM_BUILD_LOG,
+				sizeof( buffer ),
+				buffer,
+				&len
+			);
 
-
-
+			printf( "%s\n", buffer );
+			exit( 1 );
+		}
 
     //create compute kernel
-
-
-
-
+		kernel = clCreateKernel( program, "matrixMul", &err );
+    if ( !kernel || err != CL_SUCCESS ) {
+        printf( "Error: Failed to create compute kernel!\n" );
+        exit( 1 );
+    }
 
     //create the input and output arrays in device memory
+		d_C = clCreateBuffer( context, CL_MEM_READ_WRITE, memA, NULL, &err );
+    d_A = clCreateBuffer(
+			context,
+			CL_MEM_READ_WRITE | CL_MEM_COPY_HOST_PTR,
+			memA,
+			h_A,
+			&err
+		);
+    d_B = clCreateBuffer(
+			context,
+			CL_MEM_READ_WRITE | CL_MEM_COPY_HOST_PTR,
+			memB,
+			h_B,
+			&err
+		);
 
-
-
-
+    if ( !d_A || !d_B || !d_C ) {
+        printf( "Error: Failed to allocate device memory!\n" );
+        exit( 1 );
+    }
 
     printf("Running matrix multiplication for matrices A (%dx%d) and B (%dx%d) ...\n", WA,HA,WB,HB);
 
     //launch OpenCL kernel
+		size_t localWorkSize[2], globalWorkSize[2];
 
+    int wA = WA;
+    int wC = WC;
+    err = clSetKernelArg( kernel, 0, sizeof(cl_mem), (void *)&d_C );
+    err |= clSetKernelArg( kernel, 1, sizeof(cl_mem), (void *)&d_A );
+    err |= clSetKernelArg( kernel, 2, sizeof(cl_mem), (void *)&d_B );
+    err |= clSetKernelArg( kernel, 3, sizeof(int), (void *)&wA );
+    err |= clSetKernelArg( kernel, 4, sizeof(int), (void *)&wC );
 
-
+    if ( err != CL_SUCCESS ) {
+			printf( "Error: Failed to set kernel arguments! %d\n", err );
+        exit( 1 );
+    }
 
     //define global and local work size
+		localWorkSize[0] = 4;
+    localWorkSize[1] = 4;
+    globalWorkSize[0] = 512;
+    globalWorkSize[1] = 512;
 
+    err = clEnqueueNDRangeKernel(
+			commands,
+			kernel,
+			2,
+			NULL,
+			globalWorkSize,
+			localWorkSize,
+    	0,
+			NULL,
+			&event
+		);
 
+    if ( err != CL_SUCCESS ) {
+        printf( "Error: Failed to execute kernel! %d\n", err );
+        exit( 1 );
+    }
 
-
-    //executing the kernel 
+    //executing the kernel
     //Hint: remember to set the dimension correctly...
 
-
-
     //calculate the execution time
+		clFinish( commands );
+		clWaitForEvents( 1, &event );
+		cl_ulong time_start, time_end;
+		double total_time;
 
+		clGetEventProfilingInfo(
+			event,
+			CL_PROFILING_COMMAND_START,
+			sizeof(time_start),
+			&time_start,
+			NULL
+		);
+		clGetEventProfilingInfo(
+			event,
+			CL_PROFILING_COMMAND_END,
+			sizeof(time_end),
+			&time_end,
+			NULL
+		);
 
+		total_time = time_end - time_start;
 
+		if (err != CL_SUCCESS){
+			printf("Error: Failed to execute kernel! %d\n", err);
+			exit(1);
+		}
 
     //retrieve result from device
+		err = clEnqueueReadBuffer(
+			commands,
+			d_C,
+			CL_TRUE,
+			0,
+			memC,
+			h_C,
+			0,
+			NULL,
+			NULL
+		);
 
-
-
-
-
+    if (err != CL_SUCCESS) {
+			printf( "Error: Failed to read output array! %d\n", err );
+      exit( 1 );
+    }
 
     printf("Matrix multiplication completed...\n");
 
@@ -223,9 +364,6 @@ int main(int argc, char** argv)
 #endif
 
     //cleanup host and device
-
-    
-
 
 
 
